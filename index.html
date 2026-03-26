@@ -419,7 +419,14 @@ function renderTable() {
   const deDate  = fDe  ? new Date(fDe  + 'T00:00:00') : null;
   const ateDate = fAte ? new Date(fAte + 'T23:59:59') : null;
 
-  const filtered = JOGOS.filter(j => {
+  const filtered = [...JOGOS].sort((a, b) => {
+    const da = parseJogoData(a.data);
+    const db = parseJogoData(b.data);
+    if (da && db) return da - db;   // ambos com data → cronológico
+    if (da) return -1;              // só A tem data → A primeiro
+    if (db) return  1;              // só B tem data → B primeiro
+    return 0;                       // ambos sem data → manter ordem
+  }).filter(j => {
     if (fTime && j.time !== fTime) return false;
     if (fComp && j.comp !== fComp) return false;
     if (fStatus === 'encerrado' && j.status !== 'realizado' && j.status !== 'eliminado') return false;
