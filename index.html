@@ -35,10 +35,21 @@
     .tab.active { color: #f78166; border-color: #f78166; font-weight: 600; }
 
     /* Filters */
-    .filters { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+    .filters { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.6rem; align-items: center; }
     .filters select { background: #161b22; border: 1px solid #30363d; color: #e6edf3; padding: 0.375rem 0.75rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
     .filters select:focus { outline: none; border-color: #58a6ff; }
     .filters .count { font-size: 0.75rem; color: #8b949e; margin-left: auto; }
+
+    /* Date filter row */
+    .date-row { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+    .date-row .lbl { font-size: 0.75rem; color: #8b949e; }
+    .date-row input[type=date] { background: #161b22; border: 1px solid #30363d; color: #e6edf3; padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer; color-scheme: dark; }
+    .date-row input[type=date]:focus { outline: none; border-color: #58a6ff; }
+    .dq { display: inline-flex; gap: 0.35rem; }
+    .dq-btn { background: #21262d; border: 1px solid #30363d; color: #8b949e; padding: 0.3rem 0.65rem; border-radius: 100px; font-size: 0.72rem; cursor: pointer; transition: all .15s; }
+    .dq-btn:hover { background: #30363d; color: #e6edf3; }
+    .dq-btn.active { background: #1f3a5f; border-color: #58a6ff; color: #58a6ff; font-weight: 600; }
+    .sep { color: #30363d; }
 
     /* Table */
     .table-wrap { overflow-x: auto; border: 1px solid #30363d; border-radius: 8px; }
@@ -114,7 +125,7 @@
     <h1>Futebol Sergipano 2026</h1>
     <div class="sub">Monitoramento dos 10 times do Sergipão 2026</div>
   </div>
-  <div class="updated" id="updated-at">Atualizado em 25/03/2026</div>
+  <div class="updated" id="updated-at">Atualizado em 26/03/2026</div>
 </header>
 
 <div class="container">
@@ -157,6 +168,26 @@
       </select>
       <span class="count" id="count-label"></span>
     </div>
+
+    <!-- Filtro de datas -->
+    <div class="date-row">
+      <span class="lbl">Período:</span>
+      <div class="dq">
+        <button class="dq-btn active" onclick="setDateQuick('all',this)">Todos</button>
+        <button class="dq-btn" onclick="setDateQuick('past',this)">Passados</button>
+        <button class="dq-btn" onclick="setDateQuick('today',this)">Hoje</button>
+        <button class="dq-btn" onclick="setDateQuick('week',this)">Próx. 7 dias</button>
+        <button class="dq-btn" onclick="setDateQuick('apr',this)">Abril</button>
+        <button class="dq-btn" onclick="setDateQuick('may',this)">Maio</button>
+        <button class="dq-btn" onclick="setDateQuick('jun',this)">Junho</button>
+      </div>
+      <span class="sep">|</span>
+      <span class="lbl">De</span>
+      <input type="date" id="f-de"  onchange="clearQuick();renderTable()">
+      <span class="lbl">Até</span>
+      <input type="date" id="f-ate" onchange="clearQuick();renderTable()">
+    </div>
+
     <div class="table-wrap" id="table-container">
       <table>
         <thead>
@@ -217,7 +248,7 @@ const JOGOS = [
   { time:"Confiança",  comp:"Sergipão", badge:"sergipao", fase:"Final", mando:"fora",  adversario:"Sergipe FC",     data:"14/03/2026", horario:"—",    local:"Arena Batistão — Aracaju/SE", status:"realizado", resultado:"0×1 (Vice)" },
 
   // ── Itabaiana — Copa do Nordeste ──────────────────────────────────────────
-  { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R1", mando:"casa", adversario:"CRB",          data:"25/03/2026", horario:"19:30", local:"Est. Etelvino Mendonça — Itabaiana/SE", status:"realizado", resultado:"" },
+  { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R1", mando:"casa", adversario:"CRB",          data:"25/03/2026", horario:"19:30", local:"Est. Etelvino Mendonça — Itabaiana/SE", status:"realizado", resultado:"0×0" },
   { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R2", mando:"fora", adversario:"Juazeirense",  data:"29/03/2026", horario:"16:00", local:"Est. Adauto Moraes — Juazeiro/BA",       status:"agendado" },
   { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R3", mando:"casa", adversario:"Confiança",    data:"09/04/2026", horario:"19:00", local:"Est. Etelvino Mendonça — Itabaiana/SE", status:"agendado" },
   { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R4", mando:"fora", adversario:"Piauí",        data:"29/04/2026", horario:"A def.", local:"Albertão — Teresina/PI",              status:"agendado" },
@@ -325,6 +356,44 @@ function mandoEl(m) {
   return '<span class="mando-ico" title="A definir" style="opacity:.4">❓</span>';
 }
 
+// Converte "DD/MM/YYYY" → Date (meia-noite local). Retorna null para strings não-data.
+function parseJogoData(str) {
+  if (!str) return null;
+  const m = str.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  if (!m) return null;
+  return new Date(`${m[3]}-${m[2]}-${m[1]}T00:00:00`);
+}
+
+function toIso(d) {
+  return d.toISOString().split('T')[0];
+}
+
+function setDateQuick(type, btn) {
+  const de  = document.getElementById('f-de');
+  const ate = document.getElementById('f-ate');
+  const today = new Date(); today.setHours(0,0,0,0);
+
+  if (type === 'all')  { de.value = '';           ate.value = ''; }
+  else if (type === 'past')  { de.value = '';     ate.value = toIso(new Date(today - 86400000)); }
+  else if (type === 'today') { de.value = toIso(today); ate.value = toIso(today); }
+  else if (type === 'week')  {
+    de.value = toIso(today);
+    const w = new Date(today); w.setDate(w.getDate() + 7);
+    ate.value = toIso(w);
+  }
+  else if (type === 'apr')  { de.value = '2026-04-01'; ate.value = '2026-04-30'; }
+  else if (type === 'may')  { de.value = '2026-05-01'; ate.value = '2026-05-31'; }
+  else if (type === 'jun')  { de.value = '2026-06-01'; ate.value = '2026-06-30'; }
+
+  document.querySelectorAll('.dq-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderTable();
+}
+
+function clearQuick() {
+  document.querySelectorAll('.dq-btn').forEach(b => b.classList.remove('active'));
+}
+
 // ── RENDER ────────────────────────────────────────────────────────────────────
 
 function renderStats() {
@@ -344,12 +413,25 @@ function renderTable() {
   const fTime   = document.getElementById('f-time').value;
   const fComp   = document.getElementById('f-comp').value;
   const fStatus = document.getElementById('f-status').value;
+  const fDe     = document.getElementById('f-de').value;   // "YYYY-MM-DD" ou ""
+  const fAte    = document.getElementById('f-ate').value;  // "YYYY-MM-DD" ou ""
+
+  const deDate  = fDe  ? new Date(fDe  + 'T00:00:00') : null;
+  const ateDate = fAte ? new Date(fAte + 'T23:59:59') : null;
 
   const filtered = JOGOS.filter(j => {
     if (fTime && j.time !== fTime) return false;
     if (fComp && j.comp !== fComp) return false;
     if (fStatus === 'encerrado' && j.status !== 'realizado' && j.status !== 'eliminado') return false;
     if (fStatus && fStatus !== 'encerrado' && j.status !== fStatus) return false;
+
+    // Filtro de data: só aplica se ao menos um campo estiver preenchido
+    if (deDate || ateDate) {
+      const jogoDate = parseJogoData(j.data);
+      if (!jogoDate) return false;            // sem data → ocultar quando há filtro
+      if (deDate  && jogoDate < deDate)  return false;
+      if (ateDate && jogoDate > ateDate) return false;
+    }
     return true;
   });
 
