@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futebol Sergipano 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif; min-height: 100vh; }
+
+    /* Header */
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 1rem 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    header .emoji { font-size: 1.5rem; line-height: 1; }
+    header h1 { font-size: 1.1rem; font-weight: 700; color: #e6edf3; }
+    header .sub { font-size: 0.75rem; color: #8b949e; }
+    header .updated { margin-left: auto; font-size: 0.7rem; color: #484f58; white-space: nowrap; }
+
+    /* Container */
+    .container { max-width: 1280px; margin: 0 auto; padding: 1.25rem 1.5rem; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1.25rem; }
+    .stat { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 0.875rem 1rem; }
+    .stat .lbl { font-size: 0.7rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+    .stat .val { font-size: 1.75rem; font-weight: 700; line-height: 1; }
+    .stat.s-total .val  { color: #58a6ff; }
+    .stat.s-conf .val   { color: #3fb950; }
+    .stat.s-adef .val   { color: #d29922; }
+    .stat.s-enc .val    { color: #8b949e; }
+
+    /* Tabs */
+    .tabs { display: flex; border-bottom: 1px solid #30363d; margin-bottom: 1.25rem; gap: 0.25rem; }
+    .tab { padding: 0.625rem 1rem; cursor: pointer; font-size: 0.875rem; color: #8b949e; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color .15s; user-select: none; }
+    .tab:hover { color: #e6edf3; }
+    .tab.active { color: #f78166; border-color: #f78166; font-weight: 600; }
+
+    /* Filters */
+    .filters { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+    .filters select { background: #161b22; border: 1px solid #30363d; color: #e6edf3; padding: 0.375rem 0.75rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
+    .filters select:focus { outline: none; border-color: #58a6ff; }
+    .filters .count { font-size: 0.75rem; color: #8b949e; margin-left: auto; }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; border: 1px solid #30363d; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    thead th { text-align: left; padding: 0.6rem 0.875rem; color: #8b949e; font-weight: 500; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; background: #161b22; border-bottom: 1px solid #30363d; white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid #21262d; transition: background .1s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #161b22; }
+    tbody td { padding: 0.6rem 0.875rem; vertical-align: middle; }
+
+    /* Team */
+    .time-cell { display: flex; align-items: center; gap: 0.45rem; white-space: nowrap; }
+    .dot { border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; flex-shrink: 0; }
+
+    /* Badges – competition */
+    .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 100px; font-size: 0.65rem; font-weight: 600; white-space: nowrap; }
+    .b-nordeste { background: #1f1040; color: #a78bfa; border: 1px solid #4c1d95; }
+    .b-brasil   { background: #2d1400; color: #fbbf24; border: 1px solid #92400e; }
+    .b-seriod   { background: #051525; color: #60a5fa; border: 1px solid #1e3a5f; }
+    .b-sergipao { background: #062012; color: #6ee7b7; border: 1px solid #065f46; }
+
+    /* Status */
+    .st { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 100px; font-size: 0.65rem; font-weight: 600; white-space: nowrap; }
+    .st-ag  { background: #0a2014; color: #3fb950; border: 1px solid #1a4428; }
+    .st-ad  { background: #1c1200; color: #d29922; border: 1px solid #6e4c03; }
+    .st-re  { background: #1c2128; color: #8b949e; border: 1px solid #30363d; }
+    .st-el  { background: #1c0a0a; color: #f85149; border: 1px solid #6e1c1c; }
+
+    .mando-ico { font-size: 0.85rem; }
+    .fase-txt  { color: #8b949e; }
+    .local-txt { color: #8b949e; max-width: 220px; }
+
+    /* No results */
+    .no-results { text-align: center; padding: 3rem 1rem; color: #484f58; }
+    .no-results .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+
+    /* Times grid */
+    .times-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 0.875rem; }
+    .tc { background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden; }
+    .tc-head { padding: 0.875rem 1rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid #30363d; }
+    .tc-head .dot-lg { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700; color: #fff; flex-shrink: 0; }
+    .tc-head .name { font-weight: 600; font-size: 0.9rem; }
+    .tc-head .cidade { font-size: 0.7rem; color: #8b949e; }
+    .tc-body { padding: 0.25rem 0; }
+    .cr { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 1rem; border-bottom: 1px solid #21262d; font-size: 0.78rem; }
+    .cr:last-child { border-bottom: none; }
+    .cr .cn { color: #8b949e; }
+    .cr .cd { font-weight: 600; }
+    .cd-at { color: #3fb950; }
+    .cd-el { color: #f85149; }
+    .cd-en { color: #8b949e; }
+    .cd-aw { color: #d29922; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem 1rem; color: #484f58; font-size: 0.72rem; border-top: 1px solid #21262d; margin-top: 2rem; }
+    footer a { color: #58a6ff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .container { padding: 1rem; }
+      header { padding: 0.875rem 1rem; }
+      .updated { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="emoji">⚽</span>
+  <div>
+    <h1>Futebol Sergipano 2026</h1>
+    <div class="sub">Monitoramento dos 10 times do Sergipão 2026</div>
+  </div>
+  <div class="updated" id="updated-at">Atualizado em 25/03/2026</div>
+</header>
+
+<div class="container">
+
+  <div class="stats" id="stats"></div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('jogos')">📋 Jogos</div>
+    <div class="tab" onclick="showTab('times')">🏟️ Times</div>
+  </div>
+
+  <!-- Tab Jogos -->
+  <div id="tab-jogos">
+    <div class="filters">
+      <select id="f-time" onchange="renderTable()">
+        <option value="">Todos os times</option>
+        <option>Sergipe FC</option>
+        <option>Confiança</option>
+        <option>Itabaiana</option>
+        <option>América de Propriá</option>
+        <option>Lagarto</option>
+        <option>Falcon</option>
+        <option>Desportiva Aracaju</option>
+        <option>Atlético Gloriense</option>
+        <option>Dorense</option>
+        <option>Guarany-SE</option>
+      </select>
+      <select id="f-comp" onchange="renderTable()">
+        <option value="">Todas as competições</option>
+        <option>Copa do Nordeste</option>
+        <option>Copa do Brasil</option>
+        <option>Série D</option>
+        <option>Sergipão</option>
+      </select>
+      <select id="f-status" onchange="renderTable()">
+        <option value="">Todos os status</option>
+        <option value="agendado">Confirmados</option>
+        <option value="a_definir">A Definir</option>
+        <option value="encerrado">Encerrados</option>
+      </select>
+      <span class="count" id="count-label"></span>
+    </div>
+    <div class="table-wrap" id="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Competição</th>
+            <th>Fase</th>
+            <th>Adversário</th>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Local</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div id="no-results" class="no-results" style="display:none">
+      <div class="icon">🔍</div>
+      Nenhum jogo encontrado com os filtros selecionados.
+    </div>
+  </div>
+
+  <!-- Tab Times -->
+  <div id="tab-times" style="display:none">
+    <div class="times-grid" id="times-grid"></div>
+  </div>
+
+</div>
+
+<footer>
+  Futebol Sergipano 2026 &middot; Atualizado diariamente às 8h &middot;
+  <a href="https://github.com/annekarolines/sergipe-fc-2026" target="_blank">Ver no GitHub</a>
+</footer>
+
+<script>
+// ── DATA ─────────────────────────────────────────────────────────────────────
+
+const TIMES = {
+  "Sergipe FC":         { cor: "#dc2626", sig: "SFC", cidade: "Aracaju/SE" },
+  "Confiança":          { cor: "#1d4ed8", sig: "CON", cidade: "Aracaju/SE" },
+  "Itabaiana":          { cor: "#16a34a", sig: "ITA", cidade: "Itabaiana/SE" },
+  "América de Propriá": { cor: "#d97706", sig: "AMP", cidade: "Propriá/SE" },
+  "Lagarto":            { cor: "#7c3aed", sig: "LAG", cidade: "Lagarto/SE" },
+  "Falcon":             { cor: "#ea580c", sig: "FAL", cidade: "Aracaju/SE" },
+  "Desportiva Aracaju": { cor: "#db2777", sig: "DES", cidade: "Aracaju/SE" },
+  "Atlético Gloriense": { cor: "#0891b2", sig: "AGL", cidade: "Glória/SE" },
+  "Dorense":            { cor: "#65a30d", sig: "DOR", cidade: "N.S. das Dores/SE" },
+  "Guarany-SE":         { cor: "#e11d48", sig: "GUA", cidade: "Laranjeiras/SE" },
+};
+
+// status: agendado | a_definir | realizado | eliminado
+// mando:  casa | fora | a_def
+const JOGOS = [
+
+  // ── Sergipão 2026 (ENCERRADO) ─────────────────────────────────────────────
+  { time:"Sergipe FC", comp:"Sergipão", badge:"sergipao", fase:"Final", mando:"casa",  adversario:"Confiança",      data:"14/03/2026", horario:"—",    local:"Arena Batistão — Aracaju/SE", status:"realizado", resultado:"1×0 🏆 Campeão" },
+  { time:"Confiança",  comp:"Sergipão", badge:"sergipao", fase:"Final", mando:"fora",  adversario:"Sergipe FC",     data:"14/03/2026", horario:"—",    local:"Arena Batistão — Aracaju/SE", status:"realizado", resultado:"0×1 (Vice)" },
+
+  // ── Itabaiana — Copa do Nordeste ──────────────────────────────────────────
+  { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R1", mando:"casa", adversario:"CRB",          data:"25/03/2026", horario:"19:30", local:"Est. Etelvino Mendonça — Itabaiana/SE", status:"realizado", resultado:"" },
+  { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R2", mando:"fora", adversario:"Juazeirense",  data:"29/03/2026", horario:"16:00", local:"Est. Adauto Moraes — Juazeiro/BA",       status:"agendado" },
+  { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R3", mando:"casa", adversario:"Confiança",    data:"09/04/2026", horario:"19:00", local:"Est. Etelvino Mendonça — Itabaiana/SE", status:"agendado" },
+  { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R4", mando:"fora", adversario:"Piauí",        data:"29/04/2026", horario:"A def.", local:"Albertão — Teresina/PI",              status:"agendado" },
+  { time:"Itabaiana", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo A · R5", mando:"a_def", adversario:"Botafogo-PB", data:"A definir",  horario:"A def.", local:"A definir",                          status:"a_definir" },
+
+  // ── Confiança — Copa do Nordeste ──────────────────────────────────────────
+  { time:"Confiança", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo B · R1", mando:"fora",  adversario:"Sousa",         data:"26/03/2026", horario:"19:00", local:"Est. Gov. Antônio Mariz — Sousa/PB",    status:"agendado" },
+  { time:"Confiança", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo B · R2", mando:"a_def", adversario:"Fluminense-PI", data:"29/03/2026", horario:"A def.", local:"A definir",                          status:"agendado" },
+  { time:"Confiança", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo B · R3", mando:"fora",  adversario:"Itabaiana",     data:"09/04/2026", horario:"19:00", local:"Est. Etelvino Mendonça — Itabaiana/SE", status:"agendado" },
+  { time:"Confiança", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo B · R4", mando:"a_def", adversario:"Vitória",       data:"A definir",  horario:"A def.", local:"A definir",                          status:"a_definir" },
+  { time:"Confiança", comp:"Copa do Nordeste", badge:"nordeste", fase:"Grupo B · R5", mando:"a_def", adversario:"ASA",           data:"A definir",  horario:"A def.", local:"A definir",                          status:"a_definir" },
+
+  // ── Confiança — Copa do Brasil ────────────────────────────────────────────
+  { time:"Confiança", comp:"Copa do Brasil", badge:"brasil", fase:"5ª Fase — IDA",   mando:"a_def", adversario:"Grêmio", data:"22/04/2026", horario:"A conf.", local:"A confirmar", status:"agendado" },
+  { time:"Confiança", comp:"Copa do Brasil", badge:"brasil", fase:"5ª Fase — VOLTA", mando:"a_def", adversario:"Grêmio", data:"13/05/2026", horario:"A conf.", local:"A confirmar", status:"agendado" },
+
+  // ── Sergipe FC — Série D ──────────────────────────────────────────────────
+  { time:"Sergipe FC", comp:"Série D", badge:"seriod", fase:"1ª Fase · R1",  mando:"casa",  adversario:"ASA",          data:"05/04/2026",   horario:"16:00",  local:"Est. Lourival Baptista — Aracaju/SE", status:"agendado" },
+  { time:"Sergipe FC", comp:"Série D", badge:"seriod", fase:"1ª Fase · R2",  mando:"a_def", adversario:"CSA",          data:"A confirmar",  horario:"A conf.", local:"A confirmar",                         status:"a_definir" },
+  { time:"Sergipe FC", comp:"Série D", badge:"seriod", fase:"1ª Fase · R3",  mando:"a_def", adversario:"CSE",          data:"A confirmar",  horario:"A conf.", local:"A confirmar",                         status:"a_definir" },
+  { time:"Sergipe FC", comp:"Série D", badge:"seriod", fase:"1ª Fase · R4",  mando:"a_def", adversario:"Jacuipense",   data:"A confirmar",  horario:"A conf.", local:"A confirmar",                         status:"a_definir" },
+  { time:"Sergipe FC", comp:"Série D", badge:"seriod", fase:"1ª Fase · R5",  mando:"a_def", adversario:"Atlético-BA",  data:"A confirmar",  horario:"A conf.", local:"A confirmar",                         status:"a_definir" },
+  { time:"Sergipe FC", comp:"Série D", badge:"seriod", fase:"1ª Fase · R6",  mando:"a_def", adversario:"Juazeirense",  data:"A confirmar",  horario:"A conf.", local:"A confirmar",                         status:"a_definir" },
+  { time:"Sergipe FC", comp:"Série D", badge:"seriod", fase:"1ª Fase · R7-10", mando:"a_def", adversario:"(Returno — todos)", data:"Até 07/06/2026", horario:"A conf.", local:"A confirmar",               status:"a_definir" },
+
+  // ── Eliminados Copa do Brasil ─────────────────────────────────────────────
+  { time:"Itabaiana",          comp:"Copa do Brasil", badge:"brasil", fase:"2ª Fase", mando:"fora",  adversario:"Manauara",   data:"Encerrado", horario:"—", local:"Manaus/AM", status:"eliminado", resultado:"1×3" },
+  { time:"Lagarto",            comp:"Copa do Brasil", badge:"brasil", fase:"2ª Fase", mando:"a_def", adversario:"Nova Iguaçu", data:"Encerrado", horario:"—", local:"—",         status:"eliminado", resultado:"Pên. 3×4" },
+  { time:"América de Propriá", comp:"Copa do Brasil", badge:"brasil", fase:"1ª Fase", mando:"a_def", adversario:"Tirol",       data:"Encerrado", horario:"—", local:"—",         status:"eliminado", resultado:"Pênaltis" },
+];
+
+const TIMES_STATUS = [
+  { time:"Sergipe FC", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Campeão 🏆" },
+    { n:"⚽ Série D 2026",       s:"aguardando", d:"Grupo A10 · estreia 05/04" },
+  ]},
+  { time:"Confiança", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Vice-campeão" },
+    { n:"⚽ Copa do Nordeste",   s:"ativo",     d:"Grupo B · 5 jogos" },
+    { n:"⚽ Copa do Brasil",     s:"ativo",     d:"5ª Fase vs Grêmio" },
+  ]},
+  { time:"Itabaiana", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Participou" },
+    { n:"⚽ Copa do Nordeste",   s:"ativo",     d:"Grupo A · 5 jogos" },
+    { n:"⚽ Copa do Brasil",     s:"eliminado", d:"2ª fase (Manauara 3×1)" },
+  ]},
+  { time:"América de Propriá", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Participou" },
+    { n:"⚽ Copa do Brasil",     s:"eliminado", d:"1ª fase (Tirol · pênaltis)" },
+  ]},
+  { time:"Lagarto", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Participou" },
+    { n:"⚽ Copa do Brasil",     s:"eliminado", d:"2ª fase (Nova Iguaçu · pên.)" },
+  ]},
+  { time:"Falcon", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Participou" },
+    { n:"⚽ Nacionais 2026",     s:"encerrado", d:"Sem competição" },
+  ]},
+  { time:"Desportiva Aracaju", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Participou" },
+    { n:"⚽ Nacionais 2026",     s:"encerrado", d:"Sem competição" },
+  ]},
+  { time:"Atlético Gloriense", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Participou" },
+    { n:"⚽ Nacionais 2026",     s:"encerrado", d:"Sem competição" },
+  ]},
+  { time:"Dorense", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Participou" },
+    { n:"⚽ Nacionais 2026",     s:"encerrado", d:"Sem competição" },
+  ]},
+  { time:"Guarany-SE", comps:[
+    { n:"🏆 Sergipão 2026",      s:"encerrado", d:"Participou" },
+    { n:"⚽ Nacionais 2026",     s:"encerrado", d:"Sem competição" },
+  ]},
+];
+
+// ── HELPERS ───────────────────────────────────────────────────────────────────
+
+function dot(nome, size) {
+  const t = TIMES[nome] || { cor:"#555", sig:"?" };
+  const fs = Math.round(size * 0.33);
+  return `<span class="dot" style="background:${t.cor};width:${size}px;height:${size}px;font-size:${fs}px">${t.sig}</span>`;
+}
+
+function badge(b) {
+  const L = { nordeste:"Copa do Nordeste", brasil:"Copa do Brasil", seriod:"Série D", sergipao:"Sergipão" };
+  return `<span class="badge b-${b}">${L[b]||b}</span>`;
+}
+
+function statusEl(s, res) {
+  const M = {
+    agendado:  ['st-ag', 'Confirmado'],
+    a_definir: ['st-ad', 'A Definir'],
+    realizado: ['st-re', 'Encerrado'],
+    eliminado: ['st-el', 'Eliminado'],
+  };
+  const [cls, lbl] = M[s] || ['st-ad', s];
+  const r = res ? `<span style="font-size:0.62rem;margin-left:3px">(${res})</span>` : '';
+  return `<span class="st ${cls}">${lbl}</span>${r}`;
+}
+
+function mandoEl(m) {
+  if (m === 'casa') return '<span class="mando-ico" title="Mandante">🏠</span>';
+  if (m === 'fora') return '<span class="mando-ico" title="Visitante">✈️</span>';
+  return '<span class="mando-ico" title="A definir" style="opacity:.4">❓</span>';
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+
+function renderStats() {
+  const total = JOGOS.length;
+  const conf  = JOGOS.filter(j => j.status === 'agendado').length;
+  const adef  = JOGOS.filter(j => j.status === 'a_definir').length;
+  const enc   = JOGOS.filter(j => j.status === 'realizado' || j.status === 'eliminado').length;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat s-total"><div class="lbl">Total de jogos</div><div class="val">${total}</div></div>
+    <div class="stat s-conf"><div class="lbl">Confirmados</div><div class="val">${conf}</div></div>
+    <div class="stat s-adef"><div class="lbl">A Definir</div><div class="val">${adef}</div></div>
+    <div class="stat s-enc"><div class="lbl">Encerrados</div><div class="val">${enc}</div></div>
+  `;
+}
+
+function renderTable() {
+  const fTime   = document.getElementById('f-time').value;
+  const fComp   = document.getElementById('f-comp').value;
+  const fStatus = document.getElementById('f-status').value;
+
+  const filtered = JOGOS.filter(j => {
+    if (fTime && j.time !== fTime) return false;
+    if (fComp && j.comp !== fComp) return false;
+    if (fStatus === 'encerrado' && j.status !== 'realizado' && j.status !== 'eliminado') return false;
+    if (fStatus && fStatus !== 'encerrado' && j.status !== fStatus) return false;
+    return true;
+  });
+
+  document.getElementById('count-label').textContent =
+    filtered.length === JOGOS.length ? '' : `${filtered.length} de ${JOGOS.length} jogos`;
+
+  const tbody = document.getElementById('tbody');
+  const noRes = document.getElementById('no-results');
+  const tableC = document.getElementById('table-container');
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '';
+    tableC.style.display = 'none';
+    noRes.style.display = '';
+    return;
+  }
+  tableC.style.display = '';
+  noRes.style.display = 'none';
+
+  tbody.innerHTML = filtered.map(j => `
+    <tr>
+      <td><div class="time-cell">${dot(j.time, 24)}<span>${j.time}</span></div></td>
+      <td>${badge(j.badge)}</td>
+      <td class="fase-txt">${j.fase}</td>
+      <td>${mandoEl(j.mando)}&nbsp;${j.adversario}</td>
+      <td style="white-space:nowrap">${j.data}</td>
+      <td>${j.horario}</td>
+      <td class="local-txt">${j.local}</td>
+      <td>${statusEl(j.status, j.resultado)}</td>
+    </tr>
+  `).join('');
+}
+
+function renderTimes() {
+  const sMap = {
+    ativo:     ['cd-at', '✅'],
+    eliminado: ['cd-el', '⛔'],
+    encerrado: ['cd-en', '🏁'],
+    aguardando:['cd-aw', '⏳'],
+  };
+  document.getElementById('times-grid').innerHTML = TIMES_STATUS.map(ts => {
+    const info = TIMES[ts.time] || { cor:'#555', sig:'?', cidade:'' };
+    const rows = ts.comps.map(c => {
+      const [cls, ico] = sMap[c.s] || ['cd-en', '•'];
+      return `<div class="cr"><span class="cn">${c.n}</span><span class="cd ${cls}">${ico} ${c.d}</span></div>`;
+    }).join('');
+    return `
+      <div class="tc">
+        <div class="tc-head">
+          <div class="dot-lg" style="background:${info.cor};width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:#fff">${info.sig}</div>
+          <div><div class="name">${ts.time}</div><div class="cidade">${info.cidade}</div></div>
+        </div>
+        <div class="tc-body">${rows}</div>
+      </div>`;
+  }).join('');
+}
+
+function showTab(name) {
+  document.getElementById('tab-jogos').style.display  = name === 'jogos'  ? '' : 'none';
+  document.getElementById('tab-times').style.display  = name === 'times'  ? '' : 'none';
+  document.querySelectorAll('.tab').forEach((el, i) => {
+    el.classList.toggle('active', (i===0 && name==='jogos') || (i===1 && name==='times'));
+  });
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+renderStats();
+renderTable();
+renderTimes();
+</script>
+</body>
+</html>
