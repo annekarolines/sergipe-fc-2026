@@ -15,7 +15,8 @@ import sys
 import time
 from datetime import datetime, timedelta
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,7 +26,7 @@ if not GEMINI_API_KEY:
     print("❌ GEMINI_API_KEY não encontrada.")
     sys.exit(1)
 
-genai.configure(api_key=GEMINI_API_KEY)
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 DATA_FILE = "data/jogos.json"
 HTML_FILE = "index.html"
@@ -77,20 +78,18 @@ def rebuild_html(jogos: list, updated_at: str):
 # ── GEMINI ────────────────────────────────────────────────────────────────────
 
 def call_gemini(prompt: str) -> str:
-    """Chama Gemini 2.0 Flash com Google Search grounding."""
-    tools = [genai.protos.Tool(
-        google_search_retrieval=genai.protos.GoogleSearchRetrieval(
-            dynamic_retrieval_config=genai.protos.DynamicRetrievingConfig(
-                mode=genai.protos.DynamicRetrievingConfig.Mode.MODE_DYNAMIC,
-                dynamic_threshold=0.3,
-            )
-        )
-    )]
-    model = genai.GenerativeModel("gemini-2.0-flash", tools=tools)
+    """Chama Gemini 2.0 Flash com Google Search grounding (novo SDK google-genai)."""
+    config = types.GenerateContentConfig(
+        tools=[types.Tool(google_search=types.GoogleSearch())],
+    )
 
     for attempt in range(3):
         try:
-            response = model.generate_content(prompt)
+            response = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=prompt,
+                config=config,
+            )
             return response.text
         except Exception as e:
             print(f"  Tentativa {attempt + 1} falhou: {e}")
