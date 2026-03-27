@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Atualiza dados de jogos do futebol sergipano 2026 via Gemini + Google Search.
+Atualiza dados de jogos do futebol sergipano 2026.
+Usa Gemini 2.0 Flash com Google Search grounding (plano pago).
 
 Modos:
   --mode morning  → busca resultados de jogos das últimas 48h
@@ -50,7 +51,6 @@ def rebuild_html(jogos: list, updated_at: str):
     with open(HTML_FILE, encoding="utf-8") as f:
         html = f.read()
 
-    # Serializa cada jogo como objeto JS (sem aspas nas chaves)
     def to_js_obj(j: dict) -> str:
         fields = []
         for k, v in j.items():
@@ -61,10 +61,8 @@ def rebuild_html(jogos: list, updated_at: str):
     jogos_js = "[\n" + ",\n".join(to_js_obj(j) for j in jogos) + "\n]"
 
     pattern = re.escape(MARKER_START) + r"[\s\S]*?" + re.escape(MARKER_END)
-    replacement = MARKER_START + jogos_js + MARKER_END
-    new_html = re.sub(pattern, replacement, html)
+    new_html = re.sub(pattern, MARKER_START + jogos_js + MARKER_END, html)
 
-    # Atualiza data no header
     new_html = re.sub(
         r'(id="updated-at">)([^<]+)',
         rf'\1Atualizado em {updated_at}',
@@ -78,11 +76,10 @@ def rebuild_html(jogos: list, updated_at: str):
 # ── GEMINI ────────────────────────────────────────────────────────────────────
 
 def call_gemini(prompt: str) -> str:
-    """Chama Gemini 2.0 Flash com Google Search grounding (novo SDK google-genai)."""
+    """Gemini 2.0 Flash com Google Search grounding."""
     config = types.GenerateContentConfig(
         tools=[types.Tool(google_search=types.GoogleSearch())],
     )
-
     for attempt in range(3):
         try:
             response = client.models.generate_content(
@@ -94,27 +91,26 @@ def call_gemini(prompt: str) -> str:
         except Exception as e:
             print(f"  Tentativa {attempt + 1} falhou: {e}")
             if attempt < 2:
-                time.sleep(5 * (attempt + 1))
+                time.sleep(8 * (attempt + 1))
             else:
                 raise
 
 
 def extract_json(text: str) -> list:
     """Extrai o primeiro array JSON encontrado no texto."""
-    match = re.search(r'\[[\s\S]*?\]', text)
-    if match:
-        try:
-            return json.loads(match.group())
-        except json.JSONDecodeError:
-            pass
-    # Tenta bloco de código markdown
     match = re.search(r'```(?:json)?\s*(\[[\s\S]*?\])\s*```', text)
     if match:
         try:
             return json.loads(match.group(1))
         except json.JSONDecodeError:
             pass
-    raise ValueError(f"JSON não encontrado na resposta:\n{text[:300]}")
+    match = re.search(r'\[[\s\S]*?\]', text)
+    if match:
+        try:
+            return json.loads(match.group())
+        except json.JSONDecodeError:
+            pass
+    raise ValueError(f"JSON não encontrado na resposta:\n{text[:400]}")
 
 
 # ── MORNING: resultados ───────────────────────────────────────────────────────
@@ -147,30 +143,26 @@ def morning_update(data: dict) -> dict:
 
     prompt = f"""Você é especialista em futebol brasileiro. Hoje é {today.strftime('%d/%m/%Y')}.
 
-Busque os resultados dos seguintes jogos de times sergipanos que aconteceram recentemente:
+Busque na web os resultados dos seguintes jogos de times sergipanos:
 
 {games_list}
 
-Para cada jogo com resultado CONFIRMADO, retorne um array JSON:
-[
-  {{
-    "time": "<nome exato do time sergipano>",
-    "adversario": "<nome exato do adversário>",
-    "data": "<DD/MM/YYYY>",
-    "resultado": "<X×Y>",
-    "status": "realizado"
-  }}
-]
+Para cada jogo com resultado CONFIRMADO, retorne:
+[{{
+  "time": "<nome exato do time sergipano>",
+  "adversario": "<nome exato>",
+  "data": "<DD/MM/YYYY>",
+  "resultado": "<X×Y>",
+  "status": "realizado"
+}}]
 
-Regras:
-- Use o placar final. Se decidido nos pênaltis: "X×Y (pên. A×B)"
-- Inclua SOMENTE jogos com resultado já divulgado
-- Retorne APENAS o array JSON, sem texto adicional
-"""
+Se decidido nos pênaltis: "X×Y (pên. A×B)".
+Inclua SOMENTE jogos com resultado já divulgado.
+Retorne APENAS o array JSON, sem texto adicional."""
 
     print("🔍 Buscando resultados de jogos recentes...")
     response_text = call_gemini(prompt)
-    print(f"   Resposta Gemini:\n{response_text[:400]}")
+    print(f"   Resposta:\n{response_text[:500]}")
 
     try:
         updates = extract_json(response_text)
@@ -213,34 +205,29 @@ def midday_update(data: dict) -> dict:
     today = datetime.now()
     prompt = f"""Você é especialista em futebol brasileiro. Hoje é {today.strftime('%d/%m/%Y')}.
 
-Verifique se as datas dos seguintes jogos de times sergipanos em 2026 já foram divulgadas:
+Busque na web se as datas dos seguintes jogos de times sergipanos em 2026 já foram confirmadas:
 
 {games_list}
 
-Competições: Copa do Nordeste 2026, Série D 2026 (CBF), Copa do Brasil 2026.
+Competições: Copa do Nordeste 2026, Série D 2026, Copa do Brasil 2026.
 
-Para cada jogo com data CONFIRMADA pela CBF ou pela organização da competição, retorne:
-[
-  {{
-    "time": "<nome exato>",
-    "adversario": "<nome exato>",
-    "comp": "<Copa do Nordeste|Série D|Copa do Brasil>",
-    "data": "<DD/MM/YYYY>",
-    "horario": "<HH:MM>",
-    "local": "<Estádio — Cidade/UF>",
-    "status": "agendado"
-  }}
-]
+Para cada jogo com data CONFIRMADA pela CBF ou organização da competição, retorne:
+[{{
+  "time": "<nome exato>",
+  "adversario": "<nome exato>",
+  "comp": "<Copa do Nordeste|Série D|Copa do Brasil>",
+  "data": "<DD/MM/YYYY>",
+  "horario": "<HH:MM ou 'A def.'>",
+  "local": "<Estádio — Cidade/UF ou 'A definir'>",
+  "status": "agendado"
+}}]
 
-Regras:
-- Inclua SOMENTE jogos com data oficial confirmada
-- Se o horário não foi divulgado, use "A def."
-- Retorne APENAS o array JSON, sem texto adicional
-"""
+Inclua SOMENTE jogos com data oficial confirmada.
+Retorne APENAS o array JSON, sem texto adicional."""
 
     print("🔍 Buscando confirmações de calendário...")
     response_text = call_gemini(prompt)
-    print(f"   Resposta Gemini:\n{response_text[:400]}")
+    print(f"   Resposta:\n{response_text[:500]}")
 
     try:
         updates = extract_json(response_text)
@@ -276,7 +263,7 @@ def main():
     args = parser.parse_args()
 
     data = load_data()
-    print(f"📂 Dados carregados: {len(data['jogos'])} jogos | último update: {data.get('updatedAt', '?')}")
+    print(f"📂 {len(data['jogos'])} jogos | último update: {data.get('updatedAt', '?')}")
 
     if args.mode == "morning":
         data = morning_update(data)
@@ -285,7 +272,6 @@ def main():
 
     now = datetime.now().strftime("%d/%m/%Y %H:%M")
     data["updatedAt"] = now
-
     save_data(data)
     rebuild_html(data["jogos"], now)
     print(f"\n✅ Concluído: {now}")
