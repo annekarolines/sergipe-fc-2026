@@ -1,0 +1,39 @@
+name: "⚽ Briefing Matinal — Resultados"
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 8h Brasília (UTC-3)
+  workflow_dispatch:         # permite rodar manualmente
+
+permissions:
+  contents: write
+
+jobs:
+  update-resultados:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Buscar resultados de jogos recentes
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python update_jogos.py --mode morning
+
+      - name: Publicar atualização
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/jogos.json index.html
+          git diff --staged --quiet || git commit -m "⚽ resultados $(date -u '+%d/%m/%Y')"
+          git push
