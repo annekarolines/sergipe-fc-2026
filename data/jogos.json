@@ -1,5 +1,5 @@
 {
-  "updatedAt": "29/03/2026 15:20",
+  "updatedAt": "30/03/2026 11:55",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -50,7 +50,8 @@
       "data": "29/03/2026",
       "horario": "16:00",
       "local": "Est. Adauto Moraes — Juazeiro/BA",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×3"
     },
     {
       "time": "Itabaiana",
@@ -111,7 +112,8 @@
       "data": "29/03/2026",
       "horario": "A def.",
       "local": "A definir",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "2×0"
     },
     {
       "time": "Confiança",
