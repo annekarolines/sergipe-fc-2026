@@ -1,5 +1,5 @@
 {
-  "updatedAt": "02/04/2026 11:50",
+  "updatedAt": "02/04/2026 15:50",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -84,10 +84,10 @@
       "fase": "Grupo A · R5",
       "mando": "a_def",
       "adversario": "Botafogo-PB",
-      "data": "A definir",
-      "horario": "A def.",
-      "local": "A definir",
-      "status": "a_definir"
+      "data": "22/04/2026",
+      "horario": "19:00",
+      "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
@@ -134,10 +134,10 @@
       "fase": "Grupo B · R4",
       "mando": "a_def",
       "adversario": "Vitória",
-      "data": "A definir",
+      "data": "29/04/2026 ou 30/04/2026",
       "horario": "A def.",
-      "local": "A definir",
-      "status": "a_definir"
+      "local": "Estádio Batistão — A definir",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
@@ -146,10 +146,10 @@
       "fase": "Grupo B · R5",
       "mando": "a_def",
       "adversario": "ASA",
-      "data": "A definir",
-      "horario": "A def.",
-      "local": "A definir",
-      "status": "a_definir"
+      "data": "15/04/2026",
+      "horario": "19:30",
+      "local": "Estádio Coaracy da Mata — A definir",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
