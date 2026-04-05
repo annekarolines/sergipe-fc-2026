@@ -297,6 +297,13 @@
       "local": "—",
       "status": "eliminado",
       "resultado": "Pênaltis"
-    }
+    },
+    { "time": "Confiança", "comp": "Série C", "badge": "seriec", "fase": "1ª Fase · R1",   "mando": "casa",  "adversario": "Amazonas FC",      "data": "05/04/2026",  "horario": "19:00",   "local": "Est. Lourival Baptista — Aracaju/SE", "status": "agendado" },
+    { "time": "Confiança", "comp": "Série C", "badge": "seriec", "fase": "1ª Fase · R2",   "mando": "fora",  "adversario": "Caxias do Sul",    "data": "11/04/2026",  "horario": "A def.",  "local": "Caxias do Sul/RS",                   "status": "agendado" },
+    { "time": "Confiança", "comp": "Série C", "badge": "seriec", "fase": "1ª Fase · R3+",  "mando": "a_def", "adversario": "(demais rodadas)", "data": "A confirmar", "horario": "A conf.", "local": "A confirmar",                         "status": "a_definir" },
+    { "time": "Lagarto",   "comp": "Série D", "badge": "seriod", "fase": "Grupo A9 · R1",  "mando": "casa",  "adversario": "Decisão-PE",       "data": "05/04/2026",  "horario": "16:00",   "local": "Est. Paulo Barreto — Lagarto/SE",     "status": "agendado" },
+    { "time": "Lagarto",   "comp": "Série D", "badge": "seriod", "fase": "Grupo A9 · R2",  "mando": "casa",  "adversario": "Treze",            "data": "11/04/2026",  "horario": "18:00",   "local": "Est. Paulo Barreto — Lagarto/SE",     "status": "agendado" },
+    { "time": "Lagarto",   "comp": "Série D", "badge": "seriod", "fase": "Grupo A9 · R3",  "mando": "casa",  "adversario": "Retrô-PE",         "data": "18/04/2026",  "horario": "18:00",   "local": "Est. Paulo Barreto — Lagarto/SE",     "status": "agendado" },
+    { "time": "Lagarto",   "comp": "Série D", "badge": "seriod", "fase": "Grupo A9 · R4+", "mando": "a_def", "adversario": "(demais rodadas)", "data": "A confirmar", "horario": "A conf.", "local": "A confirmar",                         "status": "a_definir" }
   ]
 }

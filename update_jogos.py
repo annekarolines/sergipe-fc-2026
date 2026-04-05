@@ -188,70 +188,122 @@ Retorne APENAS o array JSON, sem texto adicional."""
     return data
 
 
+# Times sergipanos monitorados (usados na varredura proativa por time)
+TIMES_SERGIPANOS = [
+    "Sergipe FC", "Confiança", "Itabaiana", "América de Propriá", "Lagarto",
+    "Falcon", "Desportiva Aracaju", "Atlético Gloriense", "Dorense", "Guarany-SE",
+]
+
+
 # ── MIDDAY: calendário ────────────────────────────────────────────────────────
 
 def midday_update(data: dict) -> dict:
+    today = datetime.now()
+    updated = 0
+
+    # ── Passo 1: confirmar datas de jogos já mapeados (a_definir) ────────────
     undefined = [j for j in data["jogos"] if j["status"] == "a_definir"]
 
-    if not undefined:
-        print("ℹ️  Nenhum jogo sem data para verificar.")
-        return data
-
-    games_list = "\n".join(
-        f"- {j['time']} x {j['adversario']} | {j['comp']} | {j['fase']}"
-        for j in undefined
-    )
-
-    today = datetime.now()
-    prompt = f"""Você é especialista em futebol brasileiro. Hoje é {today.strftime('%d/%m/%Y')}.
+    if undefined:
+        games_list = "\n".join(
+            f"- {j['time']} x {j['adversario']} | {j['comp']} | {j['fase']}"
+            for j in undefined
+        )
+        prompt = f"""Você é especialista em futebol brasileiro. Hoje é {today.strftime('%d/%m/%Y')}.
 
 Busque na web se as datas dos seguintes jogos de times sergipanos em 2026 já foram confirmadas:
 
 {games_list}
 
-Competições: Copa do Nordeste 2026, Série D 2026, Copa do Brasil 2026.
-
-Para cada jogo com data CONFIRMADA pela CBF ou organização da competição, retorne:
+Para cada jogo com data CONFIRMADA, retorne:
 [{{
-  "time": "<nome exato>",
+  "time": "<nome exato do time sergipano>",
   "adversario": "<nome exato>",
-  "comp": "<Copa do Nordeste|Série D|Copa do Brasil>",
+  "comp": "<nome da competição>",
   "data": "<DD/MM/YYYY>",
   "horario": "<HH:MM ou 'A def.'>",
   "local": "<Estádio — Cidade/UF ou 'A definir'>",
   "status": "agendado"
 }}]
 
-Inclua SOMENTE jogos com data oficial confirmada.
-Retorne APENAS o array JSON, sem texto adicional."""
+Inclua SOMENTE jogos com data oficial confirmada. Retorne APENAS o array JSON."""
 
-    print("🔍 Buscando confirmações de calendário...")
-    response_text = call_gemini(prompt)
-    print(f"   Resposta:\n{response_text[:500]}")
+        print("🔍 Passo 1: confirmando datas de jogos existentes...")
+        try:
+            resp = call_gemini(prompt)
+            print(f"   Resposta:\n{resp[:400]}")
+            for upd in extract_json(resp):
+                for jogo in data["jogos"]:
+                    if (
+                        jogo["time"] == upd.get("time")
+                        and jogo["adversario"] == upd.get("adversario")
+                        and jogo["comp"] == upd.get("comp")
+                        and jogo["status"] == "a_definir"
+                    ):
+                        jogo["data"]    = upd.get("data",    jogo["data"])
+                        jogo["horario"] = upd.get("horario", jogo["horario"])
+                        jogo["local"]   = upd.get("local",   jogo["local"])
+                        jogo["status"]  = "agendado"
+                        updated += 1
+                        print(f"  📅 {jogo['time']} x {jogo['adversario']}: {jogo['data']} {jogo['horario']}")
+        except Exception as e:
+            print(f"  ⚠️  {e}")
+    else:
+        print("ℹ️  Nenhum jogo sem data para verificar.")
 
-    try:
-        updates = extract_json(response_text)
-    except ValueError as e:
-        print(f"⚠️  {e}")
-        return data
+    # ── Passo 2: varredura por time — detectar novas competições ─────────────
+    jogos_existentes = {
+        (j["time"], j["adversario"], j["comp"]) for j in data["jogos"]
+    }
+    comps_existentes = {
+        (j["time"], j["comp"]) for j in data["jogos"]
+    }
 
-    updated = 0
-    for upd in updates:
-        for jogo in data["jogos"]:
-            if (
-                jogo["time"] == upd.get("time")
-                and jogo["adversario"] == upd.get("adversario")
-                and jogo["comp"] == upd.get("comp")
-                and jogo["status"] == "a_definir"
-            ):
-                jogo["data"]    = upd.get("data",    jogo["data"])
-                jogo["horario"] = upd.get("horario", jogo["horario"])
-                jogo["local"]   = upd.get("local",   jogo["local"])
-                jogo["status"]  = "agendado"
-                updated += 1
-                print(f"  📅 {jogo['time']} x {jogo['adversario']}: {jogo['data']} {jogo['horario']}")
+    print("\n🔍 Passo 2: varredura por time para detectar novas competições...")
+    for nome_time in TIMES_SERGIPANOS:
+        comps_do_time = [comp for t, comp in comps_existentes if t == nome_time]
+        comps_txt = "\n".join(f"- {c}" for c in comps_do_time) or "- nenhuma"
 
-    print(f"📆 Datas confirmadas: {updated}")
+        prompt = f"""Você é especialista em futebol brasileiro. Hoje é {today.strftime('%d/%m/%Y')}.
+
+Busque na web: o time "{nome_time}" (de Sergipe) está disputando alguma competição em 2026?
+
+Competições que JÁ ESTÃO mapeadas para este time (ignorar):
+{comps_txt}
+
+Se encontrar competições ou jogos NOVOS não listados acima, retorne:
+[{{
+  "time": "{nome_time}",
+  "comp": "<nome da competição>",
+  "badge": "<seriod|seriec|brasil|nordeste|sergipao>",
+  "fase": "<fase ou grupo>",
+  "mando": "<casa|fora|a_def>",
+  "adversario": "<adversário>",
+  "data": "<DD/MM/YYYY ou 'A confirmar'>",
+  "horario": "<HH:MM ou 'A conf.'>",
+  "local": "<Estádio — Cidade/UF ou 'A confirmar'>",
+  "status": "<agendado|a_definir>"
+}}]
+
+Se não há novidades, retorne: []
+Retorne APENAS o array JSON."""
+
+        time.sleep(4)  # respeitar rate limit
+        try:
+            resp = call_gemini(prompt)
+            novos = extract_json(resp)
+            for novo in novos:
+                chave = (novo.get("time"), novo.get("adversario"), novo.get("comp"))
+                if chave not in jogos_existentes and novo.get("adversario"):
+                    data["jogos"].append(novo)
+                    jogos_existentes.add(chave)
+                    comps_existentes.add((novo.get("time"), novo.get("comp")))
+                    updated += 1
+                    print(f"  🆕 {novo['time']} | {novo['comp']} | {novo.get('adversario')} ({novo.get('data')})")
+        except Exception as e:
+            print(f"  ⚠️  {nome_time}: {e}")
+
+    print(f"\n📆 Total de atualizações: {updated}")
     return data
 
 
