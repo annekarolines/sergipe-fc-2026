@@ -63,6 +63,8 @@
     /* Team */
     .time-cell { display: flex; align-items: center; gap: 0.45rem; white-space: nowrap; }
     .dot { border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; flex-shrink: 0; }
+    .team-logo { border-radius: 50%; object-fit: contain; background: #fff; padding: 2px; flex-shrink: 0; display: inline-block; vertical-align: middle; }
+    .team-logo-lg { border-radius: 50%; object-fit: contain; background: #fff; padding: 3px; flex-shrink: 0; }
 
     /* Badges – competition */
     .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 100px; font-size: 0.65rem; font-weight: 600; white-space: nowrap; }
@@ -229,16 +231,16 @@
 // ── DATA ─────────────────────────────────────────────────────────────────────
 
 const TIMES = {
-  "Sergipe FC":         { cor: "#dc2626", sig: "SFC", cidade: "Aracaju/SE" },
-  "Confiança":          { cor: "#1d4ed8", sig: "CON", cidade: "Aracaju/SE" },
-  "Itabaiana":          { cor: "#16a34a", sig: "ITA", cidade: "Itabaiana/SE" },
-  "América de Propriá": { cor: "#d97706", sig: "AMP", cidade: "Propriá/SE" },
-  "Lagarto":            { cor: "#7c3aed", sig: "LAG", cidade: "Lagarto/SE" },
-  "Falcon":             { cor: "#ea580c", sig: "FAL", cidade: "Aracaju/SE" },
-  "Desportiva Aracaju": { cor: "#db2777", sig: "DES", cidade: "Aracaju/SE" },
-  "Atlético Gloriense": { cor: "#0891b2", sig: "AGL", cidade: "Glória/SE" },
-  "Dorense":            { cor: "#65a30d", sig: "DOR", cidade: "N.S. das Dores/SE" },
-  "Guarany-SE":         { cor: "#e11d48", sig: "GUA", cidade: "Laranjeiras/SE" },
+  "Sergipe FC":         { cor: "#dc2626", sig: "SFC", cidade: "Aracaju/SE",          logo: "logos/sergipe-fc.svg" },
+  "Confiança":          { cor: "#1d4ed8", sig: "CON", cidade: "Aracaju/SE",          logo: "logos/confianca.svg" },
+  "Itabaiana":          { cor: "#16a34a", sig: "ITA", cidade: "Itabaiana/SE",        logo: "logos/itabaiana.svg" },
+  "América de Propriá": { cor: "#d97706", sig: "AMP", cidade: "Propriá/SE",          logo: "logos/america-propria.png" },
+  "Lagarto":            { cor: "#7c3aed", sig: "LAG", cidade: "Lagarto/SE",          logo: "logos/lagarto.png" },
+  "Falcon":             { cor: "#ea580c", sig: "FAL", cidade: "Aracaju/SE",          logo: "logos/falcon.png" },
+  "Desportiva Aracaju": { cor: "#db2777", sig: "DES", cidade: "Aracaju/SE",          logo: "logos/desportiva-aracaju.png" },
+  "Atlético Gloriense": { cor: "#0891b2", sig: "AGL", cidade: "Glória/SE",           logo: "logos/atletico-gloriense.png" },
+  "Dorense":            { cor: "#65a30d", sig: "DOR", cidade: "N.S. das Dores/SE",   logo: "logos/dorense.png" },
+  "Guarany-SE":         { cor: "#e11d48", sig: "GUA", cidade: "Laranjeiras/SE",      logo: "logos/guarany.png" },
 };
 
 // status: agendado | a_definir | realizado | eliminado
@@ -329,6 +331,10 @@ const TIMES_STATUS = [
 function dot(nome, size) {
   const t = TIMES[nome] || { cor:"#555", sig:"?" };
   const fs = Math.round(size * 0.33);
+  if (t.logo) {
+    const fb = `this.replaceWith(Object.assign(document.createElement('span'),{className:'dot',style:'background:${t.cor};width:${size}px;height:${size}px;font-size:${fs}px',textContent:'${t.sig}'}))`;
+    return `<img src="${t.logo}" alt="${nome}" class="team-logo" style="width:${size}px;height:${size}px" onerror="${fb}">`;
+  }
   return `<span class="dot" style="background:${t.cor};width:${size}px;height:${size}px;font-size:${fs}px">${t.sig}</span>`;
 }
 
@@ -487,7 +493,10 @@ function renderTimes() {
     return `
       <div class="tc">
         <div class="tc-head">
-          <div class="dot-lg" style="background:${info.cor};width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:#fff">${info.sig}</div>
+          ${info.logo
+            ? `<img src="${info.logo}" alt="${ts.time}" class="team-logo-lg" style="width:40px;height:40px" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'dot-lg',style:'background:${info.cor};width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:#fff',textContent:'${info.sig}'}))">`
+            : `<div class="dot-lg" style="background:${info.cor};width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:#fff">${info.sig}</div>`
+          }
           <div><div class="name">${ts.time}</div><div class="cidade">${info.cidade}</div></div>
         </div>
         <div class="tc-body">${rows}</div>
