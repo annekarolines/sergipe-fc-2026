@@ -1,5 +1,5 @@
 {
-  "updatedAt": "06/04/2026 11:50",
+  "updatedAt": "06/04/2026 15:44",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -395,6 +395,30 @@
       "data": "06/04/2026",
       "horario": "20:00",
       "local": "Arena Pernambuco — São Lourenço da Mata/PE",
+      "status": "agendado"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Campeonato Brasileiro Série D",
+      "badge": "seried",
+      "fase": "Grupo 9",
+      "mando": "fora",
+      "adversario": "Decisão",
+      "data": "05/04/2026",
+      "horario": "20:00",
+      "local": "Estádio José Dionísio do Carmo — Goiana/PE",
+      "status": "agendado"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Campeonato Brasileiro Série D",
+      "badge": "seried",
+      "fase": "Grupo 9",
+      "mando": "casa",
+      "adversario": "Treze",
+      "data": "11/04/2026",
+      "horario": "22:00",
+      "local": "Estádio Barretão — Lagarto/SE",
       "status": "agendado"
     }
   ]
