@@ -1,5 +1,5 @@
 {
-  "updatedAt": "05/04/2026 15:24",
+  "updatedAt": "06/04/2026 11:50",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -308,7 +308,8 @@
       "data": "05/04/2026",
       "horario": "19:00",
       "local": "Est. Lourival Baptista — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0x1"
     },
     {
       "time": "Confiança",
@@ -344,7 +345,8 @@
       "data": "05/04/2026",
       "horario": "16:00",
       "local": "Est. Paulo Barreto — Lagarto/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1x1"
     },
     {
       "time": "Lagarto",
