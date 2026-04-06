@@ -180,12 +180,13 @@
       "comp": "Série D",
       "badge": "seriod",
       "fase": "1ª Fase · R1",
-      "mando": "casa",
-      "adversario": "ASA",
+      "mando": "fora",
+      "adversario": "Serra Branca",
       "data": "05/04/2026",
-      "horario": "16:00",
-      "local": "Est. Lourival Baptista — Aracaju/SE",
-      "status": "agendado"
+      "horario": "18:30",
+      "local": "Serra Branca/PB",
+      "status": "realizado",
+      "resultado": "1×1"
     },
     {
       "time": "Sergipe FC",
