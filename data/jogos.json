@@ -310,7 +310,7 @@
       "horario": "19:00",
       "local": "Est. Lourival Baptista — Aracaju/SE",
       "status": "realizado",
-      "resultado": "0x1"
+      "resultado": "0×1"
     },
     {
       "time": "Confiança",
@@ -347,7 +347,7 @@
       "horario": "16:00",
       "local": "Est. Paulo Barreto — Lagarto/SE",
       "status": "realizado",
-      "resultado": "1x1"
+      "resultado": "1×1"
     },
     {
       "time": "Lagarto",
@@ -384,18 +384,6 @@
       "horario": "A conf.",
       "local": "A confirmar",
       "status": "a_definir"
-    },
-    {
-      "time": "Itabaiana",
-      "comp": "Campeonato Brasileiro Série C",
-      "badge": "seriec",
-      "fase": "Grupo 1",
-      "mando": "fora",
-      "adversario": "Santa Cruz",
-      "data": "06/04/2026",
-      "horario": "20:00",
-      "local": "Arena Pernambuco — São Lourenço da Mata/PE",
-      "status": "agendado"
     }
   ]
 }
