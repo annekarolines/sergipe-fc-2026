@@ -274,8 +274,8 @@ Competições que JÁ ESTÃO mapeadas para este time (ignorar):
 Se encontrar competições ou jogos NOVOS não listados acima, retorne:
 [{{
   "time": "{nome_time}",
-  "comp": "<nome da competição>",
-  "badge": "<seriod|seriec|brasil|nordeste|sergipao>",
+  "comp": "<nome curto: Série D | Série C | Copa do Brasil | Copa do Nordeste | Sergipão>",
+  "badge": "<EXATAMENTE um destes valores: seriod | seriec | brasil | nordeste | sergipao>",
   "fase": "<fase ou grupo>",
   "mando": "<casa|fora|a_def>",
   "adversario": "<adversário>",
@@ -285,8 +285,11 @@ Se encontrar competições ou jogos NOVOS não listados acima, retorne:
   "status": "<agendado|a_definir>"
 }}]
 
+ATENÇÃO: o campo "badge" deve ser EXATAMENTE um destes valores: seriod, seriec, brasil, nordeste, sergipao.
 Se não há novidades, retorne: []
 Retorne APENAS o array JSON."""
+
+        BADGES_VALIDOS = {"seriod", "seriec", "brasil", "nordeste", "sergipao"}
 
         time.sleep(4)  # respeitar rate limit
         try:
@@ -294,6 +297,10 @@ Retorne APENAS o array JSON."""
             novos = extract_json(resp)
             for novo in novos:
                 chave = (novo.get("time"), novo.get("adversario"), novo.get("comp"))
+                badge_ok = novo.get("badge") in BADGES_VALIDOS
+                if not badge_ok:
+                    print(f"  ⚠️  Badge inválido ignorado: '{novo.get('badge')}' para {novo.get('time')} | {novo.get('comp')}")
+                    continue
                 if chave not in jogos_existentes and novo.get("adversario"):
                     data["jogos"].append(novo)
                     jogos_existentes.add(chave)
