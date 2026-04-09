@@ -1,5 +1,5 @@
 {
-  "updatedAt": "09/04/2026 11:57",
+  "updatedAt": "09/04/2026 16:14",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -397,6 +397,30 @@
       "local": "Arena Pernambuco — São Lourenço da Mata/PE",
       "status": "realizado",
       "resultado": "0×1"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Série D",
+      "badge": "seriod",
+      "fase": "Grupo A9 - 2ª rodada",
+      "mando": "casa",
+      "adversario": "Treze FC",
+      "data": "11/04/2026",
+      "horario": "16:00",
+      "local": "Estádio Barretão — Lagarto/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Série D",
+      "badge": "seriod",
+      "fase": "Fase de grupos",
+      "mando": "a_def",
+      "adversario": "Retrô",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
     }
   ]
 }
