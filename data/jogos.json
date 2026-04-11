@@ -1,5 +1,5 @@
 {
-  "updatedAt": "11/04/2026 11:34",
+  "updatedAt": "11/04/2026 15:25",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -530,6 +530,18 @@
       "horario": "15:30",
       "local": "Estádio Estadual Lourival Baptista — Aracaju/SE",
       "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "Semifinal (Volta)",
+      "mando": "casa",
+      "adversario": "Confiança",
+      "data": "28/02/2026",
+      "horario": "15:30",
+      "local": "Estádio Mendonção — Itabaiana/SE",
+      "status": "encerrado"
     }
   ]
 }
