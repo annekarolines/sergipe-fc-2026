@@ -1,5 +1,5 @@
 {
-  "updatedAt": "11/04/2026 15:25",
+  "updatedAt": "12/04/2026 11:37",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -360,7 +360,8 @@
       "data": "11/04/2026",
       "horario": "18:00",
       "local": "Est. Paulo Barreto — Lagarto/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "5×4"
     },
     {
       "time": "Lagarto",
