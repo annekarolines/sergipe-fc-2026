@@ -1,5 +1,5 @@
 {
-  "updatedAt": "14/04/2026 11:59",
+  "updatedAt": "14/04/2026 16:03",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -543,6 +543,18 @@
       "horario": "15:30",
       "local": "Estádio Mendonção — Itabaiana/SE",
       "status": "encerrado"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Copa Governo do Estado",
+      "badge": "sergipao",
+      "fase": "A confirmar",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
     }
   ]
 }
