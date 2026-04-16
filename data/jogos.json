@@ -1,5 +1,5 @@
 {
-  "updatedAt": "15/04/2026 16:00",
+  "updatedAt": "16/04/2026 12:00",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -150,7 +150,8 @@
       "data": "15/04/2026",
       "horario": "19:30",
       "local": "Estádio Coaracy da Mata — A definir",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1×1"
     },
     {
       "time": "Confiança",
