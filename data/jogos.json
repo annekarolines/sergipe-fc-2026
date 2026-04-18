@@ -1,5 +1,5 @@
 {
-  "updatedAt": "18/04/2026 11:38",
+  "updatedAt": "18/04/2026 15:31",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -555,6 +555,18 @@
       "data": "A confirmar",
       "horario": "A conf.",
       "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "3ª rodada",
+      "mando": "casa",
+      "adversario": "Santa Cruz",
+      "data": "18/04/2026",
+      "horario": "16:00",
+      "local": "Arena Batistão — Aracaju/SE",
       "status": "agendado"
     }
   ]
