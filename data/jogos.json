@@ -1,5 +1,5 @@
 {
-  "updatedAt": "18/04/2026 15:31",
+  "updatedAt": "19/04/2026 11:38",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -374,7 +374,8 @@
       "data": "18/04/2026",
       "horario": "18:00",
       "local": "Est. Paulo Barreto — Lagarto/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1×2"
     },
     {
       "time": "Lagarto",
@@ -567,7 +568,8 @@
       "data": "18/04/2026",
       "horario": "16:00",
       "local": "Arena Batistão — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1×0"
     }
   ]
 }
