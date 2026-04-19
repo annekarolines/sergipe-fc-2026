@@ -1,5 +1,5 @@
 {
-  "updatedAt": "19/04/2026 11:38",
+  "updatedAt": "19/04/2026 15:31",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -570,6 +570,138 @@
       "local": "Arena Batistão — Aracaju/SE",
       "status": "realizado",
       "resultado": "1×0"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 4",
+      "mando": "fora",
+      "adversario": "Brusque",
+      "data": "25/04/2026",
+      "horario": "13:00",
+      "local": "A confirmar — Brusque/SC",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 5",
+      "mando": "casa",
+      "adversario": "Inter de Limeira",
+      "data": "02/05/2026",
+      "horario": "15:30",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 6",
+      "mando": "fora",
+      "adversario": "Ituano",
+      "data": "08/05/2026",
+      "horario": "A conf.",
+      "local": "A confirmar — Itu/SP",
+      "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 7",
+      "mando": "casa",
+      "adversario": "Maranhão",
+      "data": "15/05/2026",
+      "horario": "A conf.",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 8",
+      "mando": "casa",
+      "adversario": "Figueirense",
+      "data": "22/05/2026",
+      "horario": "A conf.",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 9",
+      "mando": "fora",
+      "adversario": "Floresta EC",
+      "data": "29/05/2026",
+      "horario": "A conf.",
+      "local": "A confirmar — Fortaleza/CE",
+      "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 10",
+      "mando": "fora",
+      "adversario": "Volta Redonda",
+      "data": "12/06/2026",
+      "horario": "A conf.",
+      "local": "A confirmar — Volta Redonda/RJ",
+      "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 11",
+      "mando": "casa",
+      "adversario": "Guaraní",
+      "data": "19/06/2026",
+      "horario": "A conf.",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 12",
+      "mando": "fora",
+      "adversario": "Ypiranga FC",
+      "data": "26/06/2026",
+      "horario": "A conf.",
+      "local": "A confirmar — Erechim/RS",
+      "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 13",
+      "mando": "casa",
+      "adversario": "Barra FC",
+      "data": "03/07/2026",
+      "horario": "A conf.",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Ronda 14",
+      "mando": "fora",
+      "adversario": "Botafogo PB",
+      "data": "10/07/2026",
+      "horario": "A conf.",
+      "local": "A confirmar — João Pessoa/PB",
+      "status": "a_definir"
     }
   ]
 }
