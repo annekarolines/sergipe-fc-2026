@@ -1,5 +1,5 @@
 {
-  "updatedAt": "21/04/2026 12:01",
+  "updatedAt": "21/04/2026 16:06",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -701,6 +701,30 @@
       "data": "10/07/2026",
       "horario": "A conf.",
       "local": "A confirmar — João Pessoa/PB",
+      "status": "a_definir"
+    },
+    {
+      "time": "América de Propriá",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "Semifinal - Jogo de Volta",
+      "mando": "fora",
+      "adversario": "Sergipe",
+      "data": "01/03/2026",
+      "horario": "A conf.",
+      "local": "Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "América de Propriá",
+      "comp": "Série D",
+      "badge": "seriod",
+      "fase": "Fase de grupos",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
       "status": "a_definir"
     }
   ]
