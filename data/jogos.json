@@ -1,5 +1,5 @@
 {
-  "updatedAt": "22/04/2026 12:00",
+  "updatedAt": "22/04/2026 16:04",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -603,10 +603,10 @@
       "fase": "Ronda 6",
       "mando": "fora",
       "adversario": "Ituano",
-      "data": "08/05/2026",
-      "horario": "A conf.",
-      "local": "A confirmar — Itu/SP",
-      "status": "a_definir"
+      "data": "10/05/2026",
+      "horario": "19:30",
+      "local": "Novelli Júnior — Itu/SP",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
