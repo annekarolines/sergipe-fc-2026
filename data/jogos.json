@@ -1,5 +1,5 @@
 {
-  "updatedAt": "21/04/2026 16:06",
+  "updatedAt": "22/04/2026 12:00",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -163,7 +163,8 @@
       "data": "22/04/2026",
       "horario": "A conf.",
       "local": "A confirmar",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×2"
     },
     {
       "time": "Confiança",
