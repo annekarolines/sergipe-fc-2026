@@ -1,5 +1,5 @@
 {
-  "updatedAt": "22/04/2026 16:04",
+  "updatedAt": "23/04/2026 12:00",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -88,7 +88,8 @@
       "data": "22/04/2026",
       "horario": "19:00",
       "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×3"
     },
     {
       "time": "Confiança",
