@@ -1,5 +1,5 @@
 {
-  "updatedAt": "24/04/2026 12:00",
+  "updatedAt": "24/04/2026 16:00",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -616,10 +616,10 @@
       "fase": "Ronda 7",
       "mando": "casa",
       "adversario": "Maranhão",
-      "data": "15/05/2026",
-      "horario": "A conf.",
-      "local": "Arena Batistão — Aracaju/SE",
-      "status": "a_definir"
+      "data": "18/05/2026",
+      "horario": "20:00",
+      "local": "Estádio Estadual Lourival Baptista — Aracaju/SE",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
@@ -628,10 +628,10 @@
       "fase": "Ronda 8",
       "mando": "casa",
       "adversario": "Figueirense",
-      "data": "22/05/2026",
-      "horario": "A conf.",
-      "local": "Arena Batistão — Aracaju/SE",
-      "status": "a_definir"
+      "data": "24/05/2026",
+      "horario": "18:00",
+      "local": "Estádio Lourival Baptista — Aracaju/SE",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
@@ -640,10 +640,10 @@
       "fase": "Ronda 9",
       "mando": "fora",
       "adversario": "Floresta EC",
-      "data": "29/05/2026",
-      "horario": "A conf.",
-      "local": "A confirmar — Fortaleza/CE",
-      "status": "a_definir"
+      "data": "30/05/2026",
+      "horario": "17:00",
+      "local": "Estádio Olímpico Horácio Domingos de Sousa — Horizonte/CE",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
@@ -676,10 +676,10 @@
       "fase": "Ronda 12",
       "mando": "fora",
       "adversario": "Ypiranga FC",
-      "data": "26/06/2026",
-      "horario": "A conf.",
-      "local": "A confirmar — Erechim/RS",
-      "status": "a_definir"
+      "data": "27/06/2026",
+      "horario": "15:00",
+      "local": "Estádio Colosso da Lagoa — Erechim/RS",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
@@ -689,9 +689,9 @@
       "mando": "casa",
       "adversario": "Barra FC",
       "data": "03/07/2026",
-      "horario": "A conf.",
-      "local": "Arena Batistão — Aracaju/SE",
-      "status": "a_definir"
+      "horario": "21:00",
+      "local": "Estádio Estadual Lourival Baptista — Aracaju/SE",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
@@ -700,10 +700,10 @@
       "fase": "Ronda 14",
       "mando": "fora",
       "adversario": "Botafogo PB",
-      "data": "10/07/2026",
-      "horario": "A conf.",
-      "local": "A confirmar — João Pessoa/PB",
-      "status": "a_definir"
+      "data": "11/07/2026",
+      "horario": "15:00",
+      "local": "Estádio José Américo de Almeida Filho — João Pessoa/PB",
+      "status": "agendado"
     },
     {
       "time": "América de Propriá",
