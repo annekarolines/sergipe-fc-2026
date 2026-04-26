@@ -1,5 +1,5 @@
 {
-  "updatedAt": "25/04/2026 15:33",
+  "updatedAt": "26/04/2026 11:42",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -583,7 +583,8 @@
       "data": "25/04/2026",
       "horario": "13:00",
       "local": "A confirmar — Brusque/SC",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1×2"
     },
     {
       "time": "Confiança",
