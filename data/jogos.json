@@ -1,5 +1,5 @@
 {
-  "updatedAt": "29/04/2026 12:19",
+  "updatedAt": "29/04/2026 16:25",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -729,6 +729,18 @@
       "horario": "A conf.",
       "local": "A confirmar",
       "status": "a_definir"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase",
+      "mando": "casa",
+      "adversario": "Falcon",
+      "data": "10/01/2026",
+      "horario": "18:00",
+      "local": "Estádio Paulo Barreto — Lagarto/SE",
+      "status": "agendado"
     }
   ]
 }
