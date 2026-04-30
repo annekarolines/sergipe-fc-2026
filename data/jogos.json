@@ -1,5 +1,5 @@
 {
-  "updatedAt": "30/04/2026 12:16",
+  "updatedAt": "30/04/2026 16:15",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -742,6 +742,54 @@
       "horario": "18:00",
       "local": "Estádio Paulo Barreto — Lagarto/SE",
       "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa São Paulo",
+      "badge": "brasil",
+      "fase": "Grupo 02",
+      "mando": "fora",
+      "adversario": "Grêmio",
+      "data": "02/01/2026",
+      "horario": "A conf.",
+      "local": "Votuporanga/SP",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa São Paulo",
+      "badge": "brasil",
+      "fase": "Grupo 02",
+      "mando": "fora",
+      "adversario": "Votuporanguense",
+      "data": "05/01/2026",
+      "horario": "A conf.",
+      "local": "Votuporanga/SP",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa São Paulo",
+      "badge": "brasil",
+      "fase": "Grupo 02",
+      "mando": "casa",
+      "adversario": "Galvez-AC",
+      "data": "08/01/2026",
+      "horario": "A conf.",
+      "local": "Votuporanga/SP",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa do Brasil",
+      "badge": "brasil",
+      "fase": "A confirmar",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
     }
   ]
 }
