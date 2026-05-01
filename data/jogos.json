@@ -1,5 +1,5 @@
 {
-  "updatedAt": "01/05/2026 12:01",
+  "updatedAt": "01/05/2026 15:47",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -790,6 +790,42 @@
       "horario": "A conf.",
       "local": "A confirmar",
       "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Copa do Nordeste",
+      "badge": "nordeste",
+      "fase": "Quartas de Final",
+      "mando": "casa",
+      "adversario": "Fortaleza",
+      "data": "07/05/2026",
+      "horario": "19:30",
+      "local": "Estádio Lourival Baptista — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Fase de Grupos",
+      "mando": "casa",
+      "adversario": "Guarani",
+      "data": "20/06/2026",
+      "horario": "15:00",
+      "local": "Estádio Lourival Baptista — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Fase de Grupos",
+      "mando": "casa",
+      "adversario": "Anápolis",
+      "data": "22/08/2026",
+      "horario": "15:00",
+      "local": "Estádio Lourival Baptista — Aracaju/SE",
+      "status": "agendado"
     }
   ]
 }
