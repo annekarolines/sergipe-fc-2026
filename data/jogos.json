@@ -1,5 +1,5 @@
 {
-  "updatedAt": "02/05/2026 11:49",
+  "updatedAt": "02/05/2026 15:39",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -666,10 +666,10 @@
       "fase": "Ronda 11",
       "mando": "casa",
       "adversario": "Guaraní",
-      "data": "19/06/2026",
-      "horario": "A conf.",
-      "local": "Arena Batistão — Aracaju/SE",
-      "status": "a_definir"
+      "data": "20/06/2026",
+      "horario": "15:00",
+      "local": "Estádio Lourival Baptista – Aracaju/SE",
+      "status": "agendado"
     },
     {
       "time": "Confiança",
