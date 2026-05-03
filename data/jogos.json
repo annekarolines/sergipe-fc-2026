@@ -1,5 +1,5 @@
 {
-  "updatedAt": "02/05/2026 15:39",
+  "updatedAt": "03/05/2026 11:48",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -597,7 +597,8 @@
       "data": "02/05/2026",
       "horario": "15:30",
       "local": "Arena Batistão — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×1"
     },
     {
       "time": "Confiança",
