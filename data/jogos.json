@@ -1,5 +1,5 @@
 {
-  "updatedAt": "03/05/2026 11:48",
+  "updatedAt": "03/05/2026 15:39",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -826,6 +826,18 @@
       "data": "22/08/2026",
       "horario": "15:00",
       "local": "Estádio Lourival Baptista — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Dorense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "Primeira fase",
+      "mando": "casa",
+      "adversario": "América",
+      "data": "17/01/2026",
+      "horario": "A conf.",
+      "local": "Estádio Ariston Azevedo — Nossa Senhora das Dores/SE",
       "status": "agendado"
     }
   ]
