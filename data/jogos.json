@@ -1,5 +1,5 @@
 {
-  "updatedAt": "06/05/2026 12:57",
+  "updatedAt": "06/05/2026 16:25",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -934,6 +934,18 @@
       "data": "09/05/2026",
       "horario": "17:00",
       "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Campeonato Sergipano Sub-15",
+      "badge": "sergipao",
+      "fase": "Oitavas de final",
+      "mando": "casa",
+      "adversario": "Del Rey",
+      "data": "09/05/2026",
+      "horario": "10:00",
+      "local": "CT do Falcon — Aracaju/SE",
       "status": "agendado"
     }
   ]
