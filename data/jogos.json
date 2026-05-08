@@ -1,5 +1,5 @@
 {
-  "updatedAt": "07/05/2026 16:33",
+  "updatedAt": "08/05/2026 12:10",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -802,7 +802,8 @@
       "data": "07/05/2026",
       "horario": "19:30",
       "local": "Estádio Lourival Baptista — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1×2"
     },
     {
       "time": "Confiança",
