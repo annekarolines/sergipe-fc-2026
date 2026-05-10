@@ -1,5 +1,5 @@
 {
-  "updatedAt": "09/05/2026 15:42",
+  "updatedAt": "10/05/2026 11:55",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -935,7 +935,8 @@
       "data": "09/05/2026",
       "horario": "17:00",
       "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×0"
     },
     {
       "time": "Falcon",
