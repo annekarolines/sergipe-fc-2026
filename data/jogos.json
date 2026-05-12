@@ -1,5 +1,5 @@
 {
-  "updatedAt": "12/05/2026 13:07",
+  "updatedAt": "12/05/2026 17:04",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -873,10 +873,10 @@
       "fase": "1ª Fase, Rodada 9",
       "mando": "fora",
       "adversario": "Falcon",
-      "data": "15/02/2026",
-      "horario": "A conf.",
-      "local": "A confirmar",
-      "status": "a_definir"
+      "data": "14/02/2026",
+      "horario": "15:30",
+      "local": "Ariston Azevedo — A definir",
+      "status": "agendado"
     },
     {
       "time": "Guarany-SE",
@@ -949,6 +949,150 @@
       "data": "09/05/2026",
       "horario": "10:00",
       "local": "CT do Falcon — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "1ª Fase",
+      "mando": "fora",
+      "adversario": "Floresta",
+      "data": "30/05/2026",
+      "horario": "17:00",
+      "local": "Domingão — Horizonte/CE",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Copa Governo do Estado",
+      "badge": "sergipao",
+      "fase": "Final",
+      "mando": "a_def",
+      "adversario": "Sergipe",
+      "data": "05/05/2026",
+      "horario": "A conf.",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Copa do Brasil Sub-15",
+      "badge": "brasil",
+      "fase": "Grupo A6",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 1",
+      "mando": "fora",
+      "adversario": "Itabaiana",
+      "data": "11/01/2026",
+      "horario": "17:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 2",
+      "mando": "casa",
+      "adversario": "Desportiva Aracaju",
+      "data": "18/01/2026",
+      "horario": "15:15",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 3",
+      "mando": "fora",
+      "adversario": "América FC",
+      "data": "21/01/2026",
+      "horario": "15:15",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 4",
+      "mando": "casa",
+      "adversario": "Confiança",
+      "data": "24/01/2026",
+      "horario": "16:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 5",
+      "mando": "fora",
+      "adversario": "AA Guarany",
+      "data": "31/01/2026",
+      "horario": "15:15",
+      "local": "Caio Feitosa — Porto da Folha/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 6",
+      "mando": "fora",
+      "adversario": "Falcon FC",
+      "data": "03/02/2026",
+      "horario": "19:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 7",
+      "mando": "casa",
+      "adversario": "Lagarto FC",
+      "data": "07/02/2026",
+      "horario": "16:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 8",
+      "mando": "fora",
+      "adversario": "CS Sergipe",
+      "data": "10/02/2026",
+      "horario": "20:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "1ª Fase - Rodada 9",
+      "mando": "casa",
+      "adversario": "Dorense",
+      "data": "14/02/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
       "status": "agendado"
     }
   ]
