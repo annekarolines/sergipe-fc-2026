@@ -1,5 +1,5 @@
 {
-  "updatedAt": "14/05/2026 12:27",
+  "updatedAt": "14/05/2026 16:58",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1092,6 +1092,30 @@
       "adversario": "Dorense",
       "data": "14/02/2026",
       "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Série D",
+      "badge": "seriod",
+      "fase": "Fase de grupos",
+      "mando": "casa",
+      "adversario": "Sergipe",
+      "data": "16/05/2026",
+      "horario": "20:00",
+      "local": "Estádio Paulo Barreto de Menezes — Lagarto/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Série D",
+      "badge": "seriod",
+      "fase": "Fase de grupos",
+      "mando": "fora",
+      "adversario": "Retrô FC",
+      "data": "24/05/2026",
+      "horario": "17:30",
       "local": "A confirmar",
       "status": "agendado"
     }
