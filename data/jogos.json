@@ -1,5 +1,5 @@
 {
-  "updatedAt": "16/05/2026 11:55",
+  "updatedAt": "16/05/2026 15:48",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1117,6 +1117,18 @@
       "data": "24/05/2026",
       "horario": "17:30",
       "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Série D",
+      "badge": "seriod",
+      "fase": "Fase de grupos",
+      "mando": "casa",
+      "adversario": "Decisão",
+      "data": "13/06/2026",
+      "horario": "13:00",
+      "local": "Estádio Paulo Barreto — Lagarto/SE",
       "status": "agendado"
     }
   ]
