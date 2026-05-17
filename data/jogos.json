@@ -1,5 +1,5 @@
 {
-  "updatedAt": "16/05/2026 15:48",
+  "updatedAt": "17/05/2026 12:00",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1105,7 +1105,8 @@
       "data": "16/05/2026",
       "horario": "20:00",
       "local": "Estádio Paulo Barreto de Menezes — Lagarto/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1x1"
     },
     {
       "time": "Lagarto",
