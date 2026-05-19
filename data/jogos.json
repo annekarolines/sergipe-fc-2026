@@ -1,5 +1,5 @@
 {
-  "updatedAt": "19/05/2026 13:56",
+  "updatedAt": "19/05/2026 17:35",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1132,6 +1132,18 @@
       "horario": "13:00",
       "local": "Estádio Paulo Barreto — Lagarto/SE",
       "status": "agendado"
+    },
+    {
+      "time": "Sergipe FC",
+      "comp": "Copa do Brasil",
+      "badge": "brasil",
+      "fase": "A confirmar",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
     }
   ]
 }
