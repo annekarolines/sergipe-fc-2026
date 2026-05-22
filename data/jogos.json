@@ -1,5 +1,5 @@
 {
-  "updatedAt": "22/05/2026 13:32",
+  "updatedAt": "22/05/2026 17:04",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1178,6 +1178,30 @@
       "adversario": "Atlético Gloriense",
       "data": "25/07/2026",
       "horario": "A confirmar",
+      "local": "Estádio Editon Oliveira — Nossa Senhora da Glória/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "1ª Fase",
+      "mando": "fora",
+      "adversario": "Inter de Limeira",
+      "data": "24/05/2026",
+      "horario": "16:30",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Copa Lotese",
+      "badge": "sergipao",
+      "fase": "1ª rodada",
+      "mando": "casa",
+      "adversario": "Desportiva Aracaju",
+      "data": "25/07/2026",
+      "horario": "A conf.",
       "local": "Estádio Editon Oliveira — Nossa Senhora da Glória/SE",
       "status": "agendado"
     }
