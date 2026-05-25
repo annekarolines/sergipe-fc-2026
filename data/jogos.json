@@ -1,5 +1,5 @@
 {
-  "updatedAt": "25/05/2026 14:11",
+  "updatedAt": "25/05/2026 16:59",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1219,6 +1219,18 @@
       "horario": "16:30",
       "local": "A confirmar",
       "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Copa do Brasil",
+      "badge": "brasil",
+      "fase": "A confirmar",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
     }
   ]
 }
