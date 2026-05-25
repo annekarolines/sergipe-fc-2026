@@ -1,5 +1,5 @@
 {
-  "updatedAt": "24/05/2026 15:55",
+  "updatedAt": "25/05/2026 14:11",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -636,7 +636,8 @@
       "data": "24/05/2026",
       "horario": "18:00",
       "local": "Estádio Lourival Baptista — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×0"
     },
     {
       "time": "Confiança",
@@ -1119,7 +1120,8 @@
       "data": "24/05/2026",
       "horario": "17:30",
       "local": "A confirmar",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1×1"
     },
     {
       "time": "Lagarto",
@@ -1191,7 +1193,8 @@
       "data": "24/05/2026",
       "horario": "16:30",
       "local": "A confirmar",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×0"
     },
     {
       "time": "Atlético Gloriense",
