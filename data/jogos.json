@@ -1,5 +1,5 @@
 {
-  "updatedAt": "26/05/2026 13:55",
+  "updatedAt": "26/05/2026 17:53",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1231,6 +1231,30 @@
       "horario": "A conf.",
       "local": "A confirmar",
       "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Sergipano Sub-15",
+      "badge": "sergipao",
+      "fase": "Semifinais",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Rodada 9",
+      "mando": "casa",
+      "adversario": "Volta Redonda",
+      "data": "30/05/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
     }
   ]
 }
