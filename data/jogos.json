@@ -1,5 +1,5 @@
 {
-  "updatedAt": "30/05/2026 15:59",
+  "updatedAt": "31/05/2026 12:13",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -649,7 +649,8 @@
       "data": "30/05/2026",
       "horario": "17:00",
       "local": "Estádio Olímpico Horácio Domingos de Sousa — Horizonte/CE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0x1"
     },
     {
       "time": "Confiança",
@@ -1266,7 +1267,8 @@
       "data": "30/05/2026",
       "horario": "17:00",
       "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0x1"
     }
   ]
 }
