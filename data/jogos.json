@@ -1,5 +1,5 @@
 {
-  "updatedAt": "02/06/2026 14:56",
+  "updatedAt": "02/06/2026 18:32",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1388,6 +1388,18 @@
       "data": "30/08/2026",
       "horario": "17:00",
       "local": "Etelvino Mendonça — Itabaiana/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Sergipano Sub-15",
+      "badge": "sergipao",
+      "fase": "Final",
+      "mando": "a_def",
+      "adversario": "Desportiva Aracaju",
+      "data": "04/06/2026",
+      "horario": "15:00",
+      "local": "Arena Batistão — Aracaju/SE",
       "status": "agendado"
     }
   ]
