@@ -1,5 +1,5 @@
 {
-  "updatedAt": "04/06/2026 14:06",
+  "updatedAt": "04/06/2026 17:39",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1400,6 +1400,18 @@
       "data": "04/06/2026",
       "horario": "15:00",
       "local": "Arena Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Copa Governo de Sergipe",
+      "badge": "sergipao",
+      "fase": "A confirmar",
+      "mando": "fora",
+      "adversario": "Atlético Gloriense",
+      "data": "25/07/2026",
+      "horario": "17:00",
+      "local": "A confirmar",
       "status": "agendado"
     }
   ]
