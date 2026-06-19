@@ -1,5 +1,5 @@
 {
-  "updatedAt": "19/06/2026 14:14",
+  "updatedAt": "19/06/2026 17:12",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1413,6 +1413,18 @@
       "data": "25/07/2026",
       "horario": "17:00",
       "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa Governo do Estado",
+      "badge": "seriod",
+      "fase": "Primeira Fase",
+      "mando": "casa",
+      "adversario": "Guarany-SE",
+      "data": "25/07/2026",
+      "horario": "17:00",
+      "local": "Estádio Adolfo Rollemberg - Aracaju/SE",
       "status": "agendado"
     }
   ]
