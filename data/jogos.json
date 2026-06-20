@@ -1,5 +1,5 @@
 {
-  "updatedAt": "20/06/2026 12:27",
+  "updatedAt": "20/06/2026 16:12",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1425,6 +1425,18 @@
       "data": "25/07/2026",
       "horario": "17:00",
       "local": "Estádio Adolfo Rollemberg - Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Fase de grupos",
+      "mando": "fora",
+      "adversario": "Anápolis FC GO",
+      "data": "20/06/2026",
+      "horario": "16:30",
+      "local": "A confirmar — Anápolis/GO",
       "status": "agendado"
     }
   ]
