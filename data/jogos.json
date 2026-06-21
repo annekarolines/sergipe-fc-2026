@@ -1,5 +1,5 @@
 {
-  "updatedAt": "20/06/2026 16:12",
+  "updatedAt": "21/06/2026 13:10",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1437,7 +1437,8 @@
       "data": "20/06/2026",
       "horario": "16:30",
       "local": "A confirmar — Anápolis/GO",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×2"
     }
   ]
 }
