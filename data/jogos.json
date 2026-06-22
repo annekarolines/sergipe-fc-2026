@@ -1,5 +1,5 @@
 {
-  "updatedAt": "22/06/2026 15:56",
+  "updatedAt": "22/06/2026 18:41",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1439,6 +1439,30 @@
       "local": "A confirmar — Anápolis/GO",
       "status": "realizado",
       "resultado": "0×2"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "12ª rodada",
+      "mando": "casa",
+      "adversario": "Ferroviária",
+      "data": "27/06/2026",
+      "horario": "19:00",
+      "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Sergipão Sub-15",
+      "badge": "sergipao",
+      "fase": "Final",
+      "mando": "a_def",
+      "adversario": "Confiança",
+      "data": "04/06/2026",
+      "horario": "15:00",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "agendado"
     }
   ]
 }
