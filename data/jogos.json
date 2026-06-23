@@ -1,5 +1,5 @@
 {
-  "updatedAt": "23/06/2026 13:43",
+  "updatedAt": "23/06/2026 17:11",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1463,6 +1463,66 @@
       "horario": "15:00",
       "local": "Arena Batistão — Aracaju/SE",
       "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "13ª rodada",
+      "mando": "fora",
+      "adversario": "Amazonas",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "14ª rodada",
+      "mando": "casa",
+      "adversario": "Brusque",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
+      "status": "a_definir"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "16ª rodada",
+      "mando": "casa",
+      "adversario": "Caxias",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
+      "status": "a_definir"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "17ª rodada",
+      "mando": "fora",
+      "adversario": "Barra",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "18ª rodada",
+      "mando": "fora",
+      "adversario": "Maranhão",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
     }
   ]
 }
