@@ -1,5 +1,5 @@
 {
-  "updatedAt": "24/06/2026 13:24",
+  "updatedAt": "24/06/2026 17:01",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -248,10 +248,10 @@
       "fase": "1ª Fase · R6",
       "mando": "a_def",
       "adversario": "Juazeirense",
-      "data": "A confirmar",
-      "horario": "A conf.",
-      "local": "A confirmar",
-      "status": "a_definir"
+      "data": "14/06/2026",
+      "horario": "16:00",
+      "local": "Batistão — Aracaju/SE",
+      "status": "agendado"
     },
     {
       "time": "Sergipe FC",
