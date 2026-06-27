@@ -1,5 +1,5 @@
 {
-  "updatedAt": "27/06/2026 12:10",
+  "updatedAt": "27/06/2026 16:01",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1523,6 +1523,18 @@
       "horario": "A conf.",
       "local": "A confirmar",
       "status": "a_definir"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Série D",
+      "badge": "seriod",
+      "fase": "Segunda Fase - Jogo de Volta",
+      "mando": "fora",
+      "adversario": "CSA",
+      "data": "27/06/2026",
+      "horario": "17:00",
+      "local": "Estádio Rei Pelé — Maceió/AL",
+      "status": "agendado"
     }
   ]
 }
