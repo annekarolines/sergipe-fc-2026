@@ -1,5 +1,5 @@
 {
-  "updatedAt": "27/06/2026 16:01",
+  "updatedAt": "28/06/2026 12:18",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1534,7 +1534,8 @@
       "data": "27/06/2026",
       "horario": "17:00",
       "local": "Estádio Rei Pelé — Maceió/AL",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×2"
     }
   ]
 }
