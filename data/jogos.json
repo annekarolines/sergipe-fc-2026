@@ -1,5 +1,5 @@
 {
-  "updatedAt": "28/06/2026 12:18",
+  "updatedAt": "28/06/2026 16:04",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1471,10 +1471,10 @@
       "fase": "13ª rodada",
       "mando": "fora",
       "adversario": "Amazonas",
-      "data": "A confirmar",
-      "horario": "A conf.",
-      "local": "A confirmar",
-      "status": "a_definir"
+      "data": "05/07/2026",
+      "horario": "19:00",
+      "local": "Estádio Municipal Carlos Zamith - Manaus/AM",
+      "status": "agendado"
     },
     {
       "time": "Itabaiana",
@@ -1483,10 +1483,10 @@
       "fase": "14ª rodada",
       "mando": "casa",
       "adversario": "Brusque",
-      "data": "A confirmar",
-      "horario": "A conf.",
-      "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
-      "status": "a_definir"
+      "data": "13/07/2026",
+      "horario": "18:30",
+      "local": "Estádio Etelvino Mendonça - Itabaiana/SE",
+      "status": "agendado"
     },
     {
       "time": "Itabaiana",
@@ -1495,10 +1495,10 @@
       "fase": "16ª rodada",
       "mando": "casa",
       "adversario": "Caxias",
-      "data": "A confirmar",
-      "horario": "A conf.",
-      "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
-      "status": "a_definir"
+      "data": "08/08/2026",
+      "horario": "15:00",
+      "local": "Estádio Etelvino Mendonça - Itabaiana/SE",
+      "status": "agendado"
     },
     {
       "time": "Itabaiana",
@@ -1507,10 +1507,10 @@
       "fase": "17ª rodada",
       "mando": "fora",
       "adversario": "Barra",
-      "data": "A confirmar",
-      "horario": "A conf.",
-      "local": "A confirmar",
-      "status": "a_definir"
+      "data": "15/08/2026",
+      "horario": "17:00",
+      "local": "Estádio Doutor Hercílio Luz - Itajaí/SC",
+      "status": "agendado"
     },
     {
       "time": "Itabaiana",
@@ -1519,10 +1519,10 @@
       "fase": "18ª rodada",
       "mando": "fora",
       "adversario": "Maranhão",
-      "data": "A confirmar",
-      "horario": "A conf.",
-      "local": "A confirmar",
-      "status": "a_definir"
+      "data": "22/08/2026",
+      "horario": "17:00",
+      "local": "Estádio Municipal Nhozinho Santos - São Luís/MA",
+      "status": "agendado"
     },
     {
       "time": "Lagarto",
