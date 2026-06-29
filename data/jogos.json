@@ -1,5 +1,5 @@
 {
-  "updatedAt": "29/06/2026 14:48",
+  "updatedAt": "29/06/2026 17:28",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1536,6 +1536,18 @@
       "local": "Estádio Rei Pelé — Maceió/AL",
       "status": "realizado",
       "resultado": "0×2"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "13ª rodada",
+      "mando": "casa",
+      "adversario": "Barra",
+      "data": "04/07/2026",
+      "horario": "19:00",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "agendado"
     }
   ]
 }
