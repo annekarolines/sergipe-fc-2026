@@ -1,5 +1,5 @@
 {
-  "updatedAt": "02/07/2026 13:00",
+  "updatedAt": "02/07/2026 16:45",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1556,6 +1556,18 @@
       "fase": "15ª rodada",
       "mando": "fora",
       "adversario": "Confiança-SE",
+      "data": "25/07/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Atlético Gloriense",
+      "comp": "Copa do Estado",
+      "badge": "sergipao",
+      "fase": "A confirmar",
+      "mando": "a_def",
+      "adversario": "A confirmar",
       "data": "25/07/2026",
       "horario": "A conf.",
       "local": "A confirmar",
