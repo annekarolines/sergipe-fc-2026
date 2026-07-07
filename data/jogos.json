@@ -1,5 +1,5 @@
 {
-  "updatedAt": "07/07/2026 13:22",
+  "updatedAt": "07/07/2026 17:06",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1566,6 +1566,30 @@
       "comp": "Copa do Estado",
       "badge": "sergipao",
       "fase": "A confirmar",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "25/07/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Lagarto",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "Rodada 5",
+      "mando": "casa",
+      "adversario": "A definir",
+      "data": "A confirmar",
+      "horario": "10:00",
+      "local": "Estádio Paulo Barreto de Menezes — Lagarto/SE",
+      "status": "a_definir"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Copa Lotese",
+      "badge": "seriod",
+      "fase": "Fase de grupos",
       "mando": "a_def",
       "adversario": "A confirmar",
       "data": "25/07/2026",
