@@ -1,5 +1,5 @@
 {
-  "updatedAt": "12/07/2026 12:02",
+  "updatedAt": "12/07/2026 15:49",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1607,6 +1607,54 @@
       "data": "13/07/2026",
       "horario": "19:30",
       "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "15ª Rodada",
+      "mando": "fora",
+      "adversario": "Confiança - SE",
+      "data": "25/07/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "16ª Rodada",
+      "mando": "casa",
+      "adversario": "S.E.R. Caxias - RS",
+      "data": "08/08/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "17ª Rodada",
+      "mando": "fora",
+      "adversario": "Barra - SC",
+      "data": "15/08/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "18ª Rodada",
+      "mando": "fora",
+      "adversario": "Maranhão - MA",
+      "data": "22/08/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
       "status": "agendado"
     }
   ]
