@@ -1,5 +1,5 @@
 {
-  "updatedAt": "14/07/2026 12:17",
+  "updatedAt": "14/07/2026 16:10",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1656,6 +1656,18 @@
       "data": "22/08/2026",
       "horario": "A conf.",
       "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "América de Propriá",
+      "comp": "Copa Lotese",
+      "badge": "sergipao",
+      "fase": "Primeira Fase",
+      "mando": "casa",
+      "adversario": "Lagarto",
+      "data": "25/07/2026",
+      "horario": "A conf.",
+      "local": "Estádio Durval Feitosa — Propriá/SE",
       "status": "agendado"
     }
   ]
