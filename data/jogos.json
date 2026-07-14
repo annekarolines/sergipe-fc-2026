@@ -1,5 +1,5 @@
 {
-  "updatedAt": "13/07/2026 17:06",
+  "updatedAt": "14/07/2026 12:17",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1329,7 +1329,8 @@
       "data": "13/07/2026",
       "horario": "21:30",
       "local": "Etelvino Mendonça — Itabaiana/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1×0"
     },
     {
       "time": "Itabaiana",
