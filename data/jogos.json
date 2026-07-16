@@ -1,5 +1,5 @@
 {
-  "updatedAt": "16/07/2026 12:22",
+  "updatedAt": "16/07/2026 16:11",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1668,6 +1668,18 @@
       "data": "25/07/2026",
       "horario": "A conf.",
       "local": "Estádio Durval Feitosa — Propriá/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "América de Propriá",
+      "comp": "Copa Governo de Sergipe",
+      "badge": "sergipao",
+      "fase": "Única",
+      "mando": "a_def",
+      "adversario": "Lagarto FC",
+      "data": "25/07/2026",
+      "horario": "17:00",
+      "local": "A confirmar",
       "status": "agendado"
     }
   ]
