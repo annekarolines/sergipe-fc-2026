@@ -1,5 +1,5 @@
 {
-  "updatedAt": "18/07/2026 15:45",
+  "updatedAt": "19/07/2026 12:00",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1716,7 +1716,8 @@
       "data": "18/07/2026",
       "horario": "15:00",
       "local": "Estádio Adolfo Rollemberg — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0x0 (pên. 4x2)"
     }
   ]
 }
