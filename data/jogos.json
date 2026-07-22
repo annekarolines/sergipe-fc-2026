@@ -1,5 +1,5 @@
 {
-  "updatedAt": "22/07/2026 12:27",
+  "updatedAt": "22/07/2026 16:15",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1777,6 +1777,18 @@
       "data": "12/08/2026",
       "horario": "15:15",
       "local": "Editon Oliveira da Silva — Nossa Senhora da Glória/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Fase Regular",
+      "mando": "fora",
+      "adversario": "AD Confiança SE",
+      "data": "25/07/2026",
+      "horario": "18:30",
+      "local": "Arena Batistão — Aracaju/SE",
       "status": "agendado"
     }
   ]
