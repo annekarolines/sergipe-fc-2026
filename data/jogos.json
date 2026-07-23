@@ -1,5 +1,5 @@
 {
-  "updatedAt": "23/07/2026 12:25",
+  "updatedAt": "23/07/2026 16:20",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1789,6 +1789,30 @@
       "data": "25/07/2026",
       "horario": "18:30",
       "local": "Arena Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa do Nordeste",
+      "badge": "nordeste",
+      "fase": "Grupo B - 1ª rodada",
+      "mando": "casa",
+      "adversario": "Ferroviário",
+      "data": "08/08/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa do Nordeste",
+      "badge": "nordeste",
+      "fase": "Grupo B - 3ª rodada",
+      "mando": "fora",
+      "adversario": "CSE",
+      "data": "22/08/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
       "status": "agendado"
     }
   ]
