@@ -1,5 +1,5 @@
 {
-  "updatedAt": "25/07/2026 12:04",
+  "updatedAt": "25/07/2026 15:56",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1813,6 +1813,90 @@
       "data": "22/08/2026",
       "horario": "A conf.",
       "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "América de Propriá",
+      "comp": "Copa do Nordeste",
+      "badge": "nordeste",
+      "fase": "Fase de grupos",
+      "mando": "fora",
+      "adversario": "CSA",
+      "data": "08/08/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
+    },
+    {
+      "time": "América de Propriá",
+      "comp": "Copa do Nordeste",
+      "badge": "nordeste",
+      "fase": "Fase de grupos",
+      "mando": "fora",
+      "adversario": "Fortaleza",
+      "data": "22/08/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa LOTESE",
+      "badge": "sergipao",
+      "fase": "Não especificado",
+      "mando": "casa",
+      "adversario": "Guarany",
+      "data": "29/07/2026",
+      "horario": "19:00",
+      "local": "Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa LOTESE",
+      "badge": "sergipao",
+      "fase": "Não especificado",
+      "mando": "fora",
+      "adversario": "Lagarto F.C.",
+      "data": "01/08/2026",
+      "horario": "16:00",
+      "local": "Barretão — Lagarto/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa LOTESE",
+      "badge": "sergipao",
+      "fase": "Não especificado",
+      "mando": "casa",
+      "adversario": "Desportiva Aracaju",
+      "data": "06/08/2026",
+      "horario": "19:00",
+      "local": "Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa LOTESE",
+      "badge": "sergipao",
+      "fase": "Não especificado",
+      "mando": "fora",
+      "adversario": "Atlético Gloriense",
+      "data": "09/08/2026",
+      "horario": "16:00",
+      "local": "Editon Oliveira da Silva — Glória/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa LOTESE",
+      "badge": "sergipao",
+      "fase": "Não especificado",
+      "mando": "casa",
+      "adversario": "América de Propriá",
+      "data": "12/08/2026",
+      "horario": "15:15",
+      "local": "Batistão — Aracaju/SE",
       "status": "agendado"
     }
   ]
