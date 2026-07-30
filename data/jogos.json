@@ -1,5 +1,5 @@
 {
-  "updatedAt": "29/07/2026 16:17",
+  "updatedAt": "30/07/2026 12:47",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1850,7 +1850,8 @@
       "data": "29/07/2026",
       "horario": "19:00",
       "local": "Batistão — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×0"
     },
     {
       "time": "Falcon",
