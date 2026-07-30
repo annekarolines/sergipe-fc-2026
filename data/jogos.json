@@ -1,5 +1,5 @@
 {
-  "updatedAt": "30/07/2026 12:47",
+  "updatedAt": "30/07/2026 16:22",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1908,10 +1908,10 @@
       "fase": "Final",
       "mando": "a_def",
       "adversario": "Falcon FC",
-      "data": "26/07/2026",
-      "horario": "A conf.",
-      "local": "A confirmar",
-      "status": "a_definir"
+      "data": "24/07/2026",
+      "horario": "15:00",
+      "local": "A definir",
+      "status": "agendado"
     },
     {
       "time": "Desportiva Aracaju",
