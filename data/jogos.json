@@ -1,5 +1,5 @@
 {
-  "updatedAt": "01/08/2026 12:03",
+  "updatedAt": "01/08/2026 15:53",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2055,6 +2055,18 @@
       "data": "12/08/2026",
       "horario": "15:15",
       "local": "Caio Feitosa — Porto da Folha/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "16ª rodada",
+      "mando": "fora",
+      "adversario": "Paysandu",
+      "data": "10/08/2026",
+      "horario": "20:00",
+      "local": "Estádio Banpará Curuzu — Belém/PA",
       "status": "agendado"
     }
   ]
