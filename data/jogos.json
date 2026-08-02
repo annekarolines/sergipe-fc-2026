@@ -1,5 +1,5 @@
 {
-  "updatedAt": "01/08/2026 15:53",
+  "updatedAt": "02/08/2026 12:05",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -1742,7 +1742,8 @@
       "data": "01/08/2026",
       "horario": "16:00",
       "local": "Barretão — Lagarto/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1x2"
     },
     {
       "time": "Lagarto",
@@ -1923,7 +1924,8 @@
       "data": "01/08/2026",
       "horario": "16:00",
       "local": "Batistão",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3x2"
     },
     {
       "time": "Desportiva Aracaju",
@@ -2019,7 +2021,8 @@
       "data": "01/08/2026",
       "horario": "15:15",
       "local": "Caio Feitosa — Porto da Folha/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1x1"
     },
     {
       "time": "Guarany-SE",
