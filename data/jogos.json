@@ -1,5 +1,5 @@
 {
-  "updatedAt": "03/08/2026 13:42",
+  "updatedAt": "03/08/2026 17:06",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2070,6 +2070,18 @@
       "data": "10/08/2026",
       "horario": "20:00",
       "local": "Estádio Banpará Curuzu — Belém/PA",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Temporada Regular",
+      "mando": "casa",
+      "adversario": "Ser Caxias do Sul RS",
+      "data": "09/08/2026",
+      "horario": "18:30",
+      "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
       "status": "agendado"
     }
   ]
