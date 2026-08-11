@@ -1,5 +1,5 @@
 {
-  "updatedAt": "11/08/2026 11:47",
+  "updatedAt": "11/08/2026 15:49",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2097,6 +2097,18 @@
       "adversario": "QFC",
       "data": "15/08/2026",
       "horario": "16:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa do Nordeste",
+      "badge": "nordeste",
+      "fase": "Grupo B, 2ª Rodada",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
       "local": "A confirmar",
       "status": "agendado"
     }
