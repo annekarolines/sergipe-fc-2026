@@ -1,5 +1,5 @@
 {
-  "updatedAt": "10/08/2026 15:50",
+  "updatedAt": "11/08/2026 11:47",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2072,7 +2072,8 @@
       "data": "10/08/2026",
       "horario": "20:00",
       "local": "Estádio Banpará Curuzu — Belém/PA",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "1×2"
     },
     {
       "time": "Itabaiana",
