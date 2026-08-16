@@ -1,5 +1,5 @@
 {
-  "updatedAt": "15/08/2026 15:11",
+  "updatedAt": "16/08/2026 11:23",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2098,7 +2098,8 @@
       "data": "15/08/2026",
       "horario": "16:00",
       "local": "A confirmar",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×0"
     },
     {
       "time": "Falcon",
