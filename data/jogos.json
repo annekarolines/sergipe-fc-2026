@@ -1,5 +1,5 @@
 {
-  "updatedAt": "16/08/2026 11:23",
+  "updatedAt": "16/08/2026 15:13",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2111,6 +2111,18 @@
       "data": "A confirmar",
       "horario": "A conf.",
       "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Copa Lotese",
+      "badge": "sergipao",
+      "fase": "Semifinal",
+      "mando": "casa",
+      "adversario": "Lagarto",
+      "data": "19/08/2026",
+      "horario": "19:00",
+      "local": "Arena Batistão — Aracaju/SE",
       "status": "agendado"
     }
   ]
