@@ -1,5 +1,5 @@
 {
-  "updatedAt": "19/08/2026 15:22",
+  "updatedAt": "20/08/2026 11:29",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2123,7 +2123,8 @@
       "data": "19/08/2026",
       "horario": "19:00",
       "local": "Arena Batistão — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "2×0"
     }
   ]
 }
