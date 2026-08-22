@@ -1,5 +1,5 @@
 {
-  "updatedAt": "22/08/2026 11:23",
+  "updatedAt": "22/08/2026 15:11",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2125,6 +2125,18 @@
       "local": "Arena Batistão — Aracaju/SE",
       "status": "realizado",
       "resultado": "2×0"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Copa do Nordeste Sub-20",
+      "badge": "nordeste",
+      "fase": "1ª Fase, Rodada 3",
+      "mando": "fora",
+      "adversario": "CSE",
+      "data": "23/08/2026",
+      "horario": "16:00",
+      "local": "Juca Sampaio — Palmeira dos Índios/AL",
+      "status": "agendado"
     }
   ]
 }
