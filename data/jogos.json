@@ -1,5 +1,5 @@
 {
-  "updatedAt": "23/08/2026 11:23",
+  "updatedAt": "23/08/2026 15:13",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2137,6 +2137,30 @@
       "data": "23/08/2026",
       "horario": "16:00",
       "local": "Juca Sampaio — Palmeira dos Índios/AL",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Copa Lotese",
+      "badge": "sergipao",
+      "fase": "Final (Jogo de Ida)",
+      "mando": "casa",
+      "adversario": "Falcon",
+      "data": "23/08/2026",
+      "horario": "16:00",
+      "local": "Arena Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Campeonato Sergipano Sub-20",
+      "badge": "sergipao",
+      "fase": "A confirmar",
+      "mando": "a_def",
+      "adversario": "Sergipe U20",
+      "data": "19/09/2026",
+      "horario": "A conf.",
+      "local": "A confirmar",
       "status": "agendado"
     }
   ]
