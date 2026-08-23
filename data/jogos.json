@@ -1,5 +1,5 @@
 {
-  "updatedAt": "22/08/2026 15:11",
+  "updatedAt": "23/08/2026 11:23",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -831,7 +831,8 @@
       "data": "22/08/2026",
       "horario": "15:00",
       "local": "Estádio Lourival Baptista — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×1"
     },
     {
       "time": "Dorense",
