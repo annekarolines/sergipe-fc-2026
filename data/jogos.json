@@ -1,5 +1,5 @@
 {
-  "updatedAt": "24/08/2026 11:32",
+  "updatedAt": "24/08/2026 15:30",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2161,6 +2161,42 @@
       "data": "19/09/2026",
       "horario": "A conf.",
       "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "fase de grupos",
+      "mando": "fora",
+      "adversario": "Ferroviária",
+      "data": "29/08/2026",
+      "horario": "17:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Itabaiana",
+      "comp": "Série C",
+      "badge": "seriec",
+      "fase": "Rodada 19",
+      "mando": "casa",
+      "adversario": "Botafogo PB",
+      "data": "29/08/2026",
+      "horario": "17:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Série D",
+      "badge": "seriod",
+      "fase": "Final (2º jogo)",
+      "mando": "Fora",
+      "adversario": "Falcon",
+      "data": "29/08/2026",
+      "horario": "16:00",
+      "local": "Arena Batistão — Aracaju/SE",
       "status": "agendado"
     }
   ]
