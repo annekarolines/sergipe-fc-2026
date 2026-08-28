@@ -1,5 +1,5 @@
 {
-  "updatedAt": "28/08/2026 21:19",
+  "updatedAt": "28/08/2026 23:47",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2294,6 +2294,78 @@
       "horario": "A conf.",
       "local": "A confirmar",
       "status": "a_definir"
+    },
+    {
+      "time": "Confiança",
+      "comp": "Sergipano Sub-20",
+      "badge": "sergipao",
+      "fase": "Fase de grupos",
+      "mando": "fora",
+      "adversario": "Lagarto F.C.",
+      "data": "05/09/2026",
+      "horario": "15:00",
+      "local": "Sabino Ribeiro — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Fase Classificatória",
+      "mando": "fora",
+      "adversario": "Sergipe",
+      "data": "05/09/2026",
+      "horario": "15:00",
+      "local": "João Hora de Oliveira — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Fase Classificatória",
+      "mando": "casa",
+      "adversario": "Confiança",
+      "data": "09/09/2026",
+      "horario": "15:00",
+      "local": "Sabino Ribeiro — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Fase Classificatória",
+      "mando": "casa",
+      "adversario": "Lagarto F.C.",
+      "data": "12/09/2026",
+      "horario": "15:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Fase Classificatória",
+      "mando": "fora",
+      "adversario": "Itabaiana",
+      "data": "19/09/2026",
+      "horario": "15:00",
+      "local": "Etelvino Mendonça — Itabaiana/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Falcon",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Fase Classificatória",
+      "mando": "casa",
+      "adversario": "Guarany",
+      "data": "22/09/2026",
+      "horario": "15:00",
+      "local": "A confirmar",
+      "status": "agendado"
     }
   ]
 }
