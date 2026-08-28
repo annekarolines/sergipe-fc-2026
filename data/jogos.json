@@ -1,5 +1,5 @@
 {
-  "updatedAt": "27/08/2026 20:56",
+  "updatedAt": "28/08/2026 00:11",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2282,6 +2282,18 @@
       "horario": "19:15",
       "local": "Estádio Caio Feitosa — Porto da Folha/SE",
       "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Sergipão A2",
+      "badge": "sergipao",
+      "fase": "Primeira fase",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
     }
   ]
 }
