@@ -1,5 +1,5 @@
 {
-  "updatedAt": "29/08/2026 18:01",
+  "updatedAt": "30/08/2026 15:14",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2173,7 +2173,8 @@
       "data": "29/08/2026",
       "horario": "17:00",
       "local": "A confirmar",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×1"
     },
     {
       "time": "Itabaiana",
@@ -2185,7 +2186,8 @@
       "data": "29/08/2026",
       "horario": "17:00",
       "local": "A confirmar",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×2"
     },
     {
       "time": "Desportiva Aracaju",
