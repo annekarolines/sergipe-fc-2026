@@ -1,5 +1,5 @@
 {
-  "updatedAt": "02/09/2026 15:00",
+  "updatedAt": "02/09/2026 18:15",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2497,6 +2497,102 @@
       "mando": "fora",
       "adversario": "Falcon Futebol Clube",
       "data": "30/09/2026",
+      "horario": "15:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Sergipe FC",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "A1",
+      "mando": "casa",
+      "adversario": "Falcon Futebol Clube",
+      "data": "05/09/2026",
+      "horario": "15:00",
+      "local": "João Hora de Oliveira — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Sergipe FC",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "A1",
+      "mando": "fora",
+      "adversario": "Itabaiana",
+      "data": "09/09/2026",
+      "horario": "15:00",
+      "local": "Etelvino Mendonça — Itabaiana/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Sergipe FC",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "A1",
+      "mando": "casa",
+      "adversario": "Guarany",
+      "data": "12/09/2026",
+      "horario": "15:00",
+      "local": "João Hora de Oliveira — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Sergipe FC",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "A1",
+      "mando": "fora",
+      "adversario": "Desportiva Aracaju",
+      "data": "19/09/2026",
+      "horario": "15:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Sergipe FC",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "A1",
+      "mando": "casa",
+      "adversario": "Lagarto F.C.",
+      "data": "26/09/2026",
+      "horario": "15:00",
+      "local": "João Hora de Oliveira — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "Fase Regular",
+      "mando": "fora",
+      "adversario": "Desportiva Aracaju",
+      "data": "05/09/2026",
+      "horario": "15:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "Fase Regular",
+      "mando": "casa",
+      "adversario": "Atlético Gloriense",
+      "data": "09/09/2026",
+      "horario": "15:00",
+      "local": "Caio Feitosa — Porto da Folha/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão",
+      "badge": "sergipao",
+      "fase": "Fase Regular",
+      "mando": "fora",
+      "adversario": "Falcon Futebol Clube",
+      "data": "22/09/2026",
       "horario": "15:00",
       "local": "A confirmar",
       "status": "agendado"
