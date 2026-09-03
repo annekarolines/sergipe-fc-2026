@@ -1,5 +1,5 @@
 {
-  "updatedAt": "03/09/2026 14:54",
+  "updatedAt": "03/09/2026 18:13",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2595,6 +2595,78 @@
       "data": "22/09/2026",
       "horario": "15:00",
       "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Série A1",
+      "mando": "fora",
+      "adversario": "Desportiva Aracaju",
+      "data": "05/09/2026",
+      "horario": "15:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Série A1",
+      "mando": "casa",
+      "adversario": "Atlético Gloriense",
+      "data": "09/09/2026",
+      "horario": "15:00",
+      "local": "Caio Feitosa — Porto da Folha/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Série A1",
+      "mando": "fora",
+      "adversario": "Sergipe",
+      "data": "12/09/2026",
+      "horario": "15:00",
+      "local": "João Hora de Oliveira — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Série A1",
+      "mando": "casa",
+      "adversario": "Confiança",
+      "data": "19/09/2026",
+      "horario": "15:00",
+      "local": "Caio Feitosa — Porto da Folha/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Série A1",
+      "mando": "fora",
+      "adversario": "Falcon Futebol Clube",
+      "data": "22/09/2026",
+      "horario": "15:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Guarany-SE",
+      "comp": "Sergipão Sub-20",
+      "badge": "sergipao",
+      "fase": "Série A1",
+      "mando": "casa",
+      "adversario": "Itabaiana",
+      "data": "26/09/2026",
+      "horario": "15:00",
+      "local": "Caio Feitosa — Porto da Folha/SE",
       "status": "agendado"
     }
   ]
