@@ -1,5 +1,5 @@
 {
-  "updatedAt": "05/09/2026 17:02",
+  "updatedAt": "06/09/2026 14:02",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2211,7 +2211,8 @@
       "data": "05/09/2026",
       "horario": "15:00",
       "local": "Estádio Editon Oliveira da Silva — Nossa Senhora da Glória/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×0 (WO)"
     },
     {
       "time": "Itabaiana",
@@ -2307,7 +2308,8 @@
       "data": "05/09/2026",
       "horario": "15:00",
       "local": "Sabino Ribeiro — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "2×1"
     },
     {
       "time": "Falcon",
@@ -2319,7 +2321,8 @@
       "data": "05/09/2026",
       "horario": "15:00",
       "local": "João Hora de Oliveira — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "2×0"
     },
     {
       "time": "Falcon",
@@ -2439,7 +2442,8 @@
       "data": "05/09/2026",
       "horario": "15:00",
       "local": "Estádio Editon Oliveira da Silva — Nossa Senhora da Glória/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×3 (WO)"
     },
     {
       "time": "Atlético Gloriense",
@@ -2511,7 +2515,8 @@
       "data": "05/09/2026",
       "horario": "15:00",
       "local": "João Hora de Oliveira — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×2"
     },
     {
       "time": "Sergipe FC",
