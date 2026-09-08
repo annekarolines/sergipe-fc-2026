@@ -1,5 +1,5 @@
 {
-  "updatedAt": "08/09/2026 14:59",
+  "updatedAt": "08/09/2026 18:13",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2673,6 +2673,18 @@
       "horario": "15:00",
       "local": "Caio Feitosa — Porto da Folha/SE",
       "status": "agendado"
+    },
+    {
+      "time": "Dorense",
+      "comp": "Copa Lotese",
+      "badge": "sergipao",
+      "fase": "A confirmar",
+      "mando": "a_def",
+      "adversario": "A confirmar",
+      "data": "A confirmar",
+      "horario": "A conf.",
+      "local": "A confirmar",
+      "status": "a_definir"
     }
   ]
 }
