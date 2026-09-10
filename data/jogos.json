@@ -1,5 +1,5 @@
 {
-  "updatedAt": "09/09/2026 18:08",
+  "updatedAt": "10/09/2026 14:55",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2588,7 +2588,8 @@
       "data": "09/09/2026",
       "horario": "15:00",
       "local": "Caio Feitosa — Porto da Folha/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×0"
     },
     {
       "time": "Guarany-SE",
@@ -2624,7 +2625,8 @@
       "data": "09/09/2026",
       "horario": "15:00",
       "local": "Caio Feitosa — Porto da Folha/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×0"
     },
     {
       "time": "Guarany-SE",
