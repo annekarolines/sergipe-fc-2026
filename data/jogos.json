@@ -1,5 +1,5 @@
 {
-  "updatedAt": "12/09/2026 17:32",
+  "updatedAt": "13/09/2026 14:51",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2236,7 +2236,8 @@
       "data": "12/09/2026",
       "horario": "15:00",
       "local": "Estádio Sabino Ribeiro — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "2×0"
     },
     {
       "time": "Itabaiana",
@@ -2346,7 +2347,8 @@
       "data": "12/09/2026",
       "horario": "15:00",
       "local": "A confirmar",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "2×1"
     },
     {
       "time": "Falcon",
