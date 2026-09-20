@@ -1,5 +1,5 @@
 {
-  "updatedAt": "19/09/2026 17:36",
+  "updatedAt": "20/09/2026 14:36",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2249,7 +2249,8 @@
       "data": "19/09/2026",
       "horario": "15:00",
       "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×4"
     },
     {
       "time": "Itabaiana",
@@ -2420,7 +2421,8 @@
       "data": "19/09/2026",
       "horario": "15:00",
       "local": "A confirmar",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×1"
     },
     {
       "time": "Desportiva Aracaju",
@@ -2652,7 +2654,8 @@
       "data": "19/09/2026",
       "horario": "15:00",
       "local": "Caio Feitosa — Porto da Folha/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "0×0"
     },
     {
       "time": "Guarany-SE",
