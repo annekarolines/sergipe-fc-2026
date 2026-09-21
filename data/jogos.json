@@ -1,5 +1,5 @@
 {
-  "updatedAt": "21/09/2026 16:52",
+  "updatedAt": "21/09/2026 19:51",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2703,6 +2703,42 @@
       "data": "09/09/2026",
       "horario": "15:00",
       "local": "Arena Batistão — Aracaju/SE",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Sergipano Sub-20",
+      "badge": "sergipao",
+      "fase": "A1",
+      "mando": "fora",
+      "adversario": "Confiança",
+      "data": "23/09/2026",
+      "horario": "15:00",
+      "local": "Sabino Ribeiro",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Sergipano Sub-20",
+      "badge": "sergipao",
+      "fase": "A1",
+      "mando": "casa",
+      "adversario": "Falcon Futebol Clube",
+      "data": "26/09/2026",
+      "horario": "15:00",
+      "local": "A confirmar",
+      "status": "agendado"
+    },
+    {
+      "time": "Desportiva Aracaju",
+      "comp": "Sergipano Sub-20",
+      "badge": "sergipao",
+      "fase": "A1",
+      "mando": "fora",
+      "adversario": "Itabaiana",
+      "data": "30/09/2026",
+      "horario": "15:00",
+      "local": "Etelvino Mendonça",
       "status": "agendado"
     }
   ]
