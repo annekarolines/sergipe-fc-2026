@@ -1,5 +1,5 @@
 {
-  "updatedAt": "23/09/2026 18:45",
+  "updatedAt": "24/09/2026 15:44",
   "jogos": [
     {
       "time": "Sergipe FC",
@@ -2262,7 +2262,8 @@
       "data": "23/09/2026",
       "horario": "15:00",
       "local": "Estádio Etelvino Mendonça — Itabaiana/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×3"
     },
     {
       "time": "Itabaiana",
@@ -2434,7 +2435,8 @@
       "data": "23/09/2026",
       "horario": "15:00",
       "local": "Sabino Ribeiro — Aracaju/SE",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×1"
     },
     {
       "time": "Atlético Gloriense",
@@ -2715,7 +2717,8 @@
       "data": "23/09/2026",
       "horario": "15:00",
       "local": "Sabino Ribeiro",
-      "status": "agendado"
+      "status": "realizado",
+      "resultado": "3×1"
     },
     {
       "time": "Desportiva Aracaju",
